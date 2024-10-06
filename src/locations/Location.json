@@ -1,0 +1,1084 @@
+{
+    "cities": [
+        {
+            "id": 1,
+            "name": "Yaoundé",
+            "district": "Camp-Sonel"
+           },
+           {
+            "id": 2,
+            "name": "Yaoundé",
+            "district": "Etoa-Meki"
+           },
+           {
+            "id": 3,
+            "name": "Yaoundé",
+            "district": "Mvog Atangana Mballa"
+           },
+           {
+            "id": 4,
+            "name": "Yaoundé",
+            "district": "Mvog-Betsi"
+           },
+           {
+            "id": 5,
+            "name": "Yaoundé",
+            "district": "Mvog-Mbi"
+           },
+           {
+            "id": 6,
+            "name": "Yaoundé",
+            "district": "Olembé"
+           },
+           {
+            "id": 7,
+            "name": "Yaoundé",
+            "district": "Olezoa"
+           },
+           {
+            "id": 8,
+            "name": "Yaoundé",
+            "district": "Ekounou"
+           },
+           {
+            "id": 9,
+            "name": "Yaoundé",
+            "district": "Elig Essono"
+           },
+           {
+            "id": 10,
+            "name": "Yaoundé",
+            "district": "Ekoudou"
+           },
+           {
+            "id": 11,
+            "name": "Yaoundé",
+            "district": "Mvan"
+           },
+           {
+            "id": 12,
+            "name": "Yaoundé",
+            "district": "Etoug-Ebe"
+           },
+           {
+            "id": 13,
+            "name": "Yaoundé",
+            "district": "Melen"
+           },
+           {
+            "id": 14,
+            "name": "Yaoundé",
+            "district": "Mini-ferme"
+           },
+           {
+            "id": 15,
+            "name": "Yaoundé",
+            "district": "Cité Verte"
+           },
+           {
+            "id": 16,
+            "name": "Yaoundé",
+            "district": "Oyom-Abang"
+           },
+           {
+            "id": 17,
+            "name": "Yaoundé",
+            "district": "Nkolbisson"
+           },
+           {
+            "id": 18,
+            "name": "Yaoundé",
+            "district": "Nyom"
+           },
+           {
+            "id": 19,
+            "name": "Yaoundé",
+            "district": "Simbock"
+           },
+           {
+            "id": 20,
+            "name": "Yaoundé",
+            "district": "Ngoa Ekélé"
+           },
+           {
+            "id": 21,
+            "name": "Yaoundé",
+            "district": "Mvolyé"
+           },
+           {
+            "id": 22,
+            "name": "Yaoundé",
+            "district": "Damas"
+           },
+           {
+            "id": 23,
+            "name": "Yaoundé",
+            "district": "Obobogo"
+           },
+           {
+            "id": 24,
+            "name": "Yaoundé",
+            "district": "Tam-Tam Weekend"
+           },
+           {
+            "id": 25,
+            "name": "Yaoundé",
+            "district": "Maison Blanche"
+           },
+           {
+            "id": 26,
+            "name": "Yaoundé",
+            "district": "Nsimeyong"
+           },
+           {
+            "id": 27,
+            "name": "Yaoundé",
+            "district": "Tsinga"
+           },
+           {
+            "id": 28,
+            "name": "Yaoundé",
+            "district": "Nkom Kana"
+           },
+           {
+            "id": 29,
+            "name": "Yaoundé",
+            "district": "Carrière"
+           },
+           {
+            "id": 30,
+            "name": "Yaoundé",
+            "district": "Mvog-Ada"
+           },
+           {
+            "id": 31,
+            "name": "Yaoundé",
+            "district": "Odza"
+           },
+           {
+            "id": 32,
+            "name": "Yaoundé",
+            "district": "Mbankolo"
+           },
+           {
+            "id": 33,
+            "name": "Yaoundé",
+            "district": "Jean-Vespa"
+           },
+           {
+            "id": 34,
+            "name": "Yaoundé",
+            "district": "Mballa 2"
+           },
+           {
+            "id": 35,
+            "name": "Yaoundé",
+            "district": "Tongolo"
+           },
+           {
+            "id": 36,
+            "name": "Yaoundé",
+            "district": "Nkol-Ewoue"
+           },
+           {
+            "id": 37,
+            "name": "Yaoundé",
+            "district": "Nkolndongo"
+           },
+           {
+            "id": 38,
+            "name": "Yaoundé",
+            "district": "Mimboman"
+           },
+           {
+            "id": 39,
+            "name": "Yaoundé",
+            "district": "Eleveur"
+           },
+           {
+            "id": 40,
+            "name": "Yaoundé",
+            "district": "Messa"
+           },
+           {
+            "id": 41,
+            "name": "Yaoundé",
+            "district": "Nkomo"
+           },
+           {
+            "id": 42,
+            "name": "Yaoundé",
+            "district": "Emonbo"
+           },
+           {
+            "id": 43,
+            "name": "Yaoundé",
+            "district": "Biteng"
+           },
+           {
+            "id": 44,
+            "name": "Yaoundé",
+            "district": "Fouda"
+           },
+           {
+            "id": 45,
+            "name": "Yaoundé",
+            "district": "Anguissa"
+           },
+           {
+            "id": 46,
+            "name": "Yaoundé",
+            "district": "Biyem-Assi "
+           },
+           {
+            "id": 47,
+            "name": "Yaoundé",
+            "district": "Briqueterie"
+           },
+           {
+            "id": 48,
+            "name": "Yaoundé",
+            "district": "Elig Edzoa"
+           },
+           {
+            "id": 49,
+            "name": "Yaoundé",
+            "district": "Essos "
+           },
+           {
+            "id": 50,
+            "name": "Yaoundé",
+            "district": "Mimboman"
+           },
+           {
+            "id": 51,
+            "name": "Yaoundé",
+            "district": "Madagascar"
+           },
+           {
+            "id": 52,
+            "name": "Yaoundé",
+            "district": "Ngousso"
+           },
+           {
+            "id": 53,
+            "name": "Yaoundé",
+            "district": "Obili"
+           },
+           {
+            "id": 54,
+            "name": "Yaoundé",
+            "district": "Omnisports"
+           },
+           {
+            "id": 55,
+            "name": "Yaoundé",
+            "district": "Santa Barbara"
+           },
+           {
+            "id": 56,
+            "name": "Yaoundé",
+            "district": "Mokolo"
+           },
+           {
+            "id": 57,
+            "name": "Yaoundé",
+            "district": "Mendong "
+           },
+           {
+            "id": 58,
+            "name": "Yaoundé",
+            "district": "Bastos"
+           },
+           {
+            "id": 59,
+            "name": "Yaoundé",
+            "district": "Jouvence"
+           },
+           {
+            "id": 60,
+            "name": "Yaoundé",
+            "district": "Emana"
+           },
+           {
+            "id": 61,
+            "name": "Douala ",
+            "district": "Bali"
+           },
+           {
+            "id": 62,
+            "name": "Douala ",
+            "district": "Bonamikengue"
+           },
+           {
+            "id": 63,
+            "name": "Douala ",
+            "district": "Bessengue"
+           },
+           {
+            "id": 64,
+            "name": "Douala ",
+            "district": "Bonamoudourou"
+           },
+           {
+            "id": 65,
+            "name": "Douala ",
+            "district": "Bona Bekombo"
+           },
+           {
+            "id": 66,
+            "name": "Douala ",
+            "district": "Bonamouti Akwa 2"
+           },
+           {
+            "id": 67,
+            "name": "Douala ",
+            "district": "Bonadibong"
+           },
+           {
+            "id": 68,
+            "name": "Douala ",
+            "district": "Bonamouti"
+           },
+           {
+            "id": 69,
+            "name": "Douala ",
+            "district": "Deïdo"
+           },
+           {
+            "id": 70,
+            "name": "Douala ",
+            "district": "Bonadouma"
+           },
+           {
+            "id": 71,
+            "name": "Douala ",
+            "district": "Bonanjo"
+           },
+           {
+            "id": 72,
+            "name": "Douala ",
+            "district": "Bonadoumbé"
+           },
+           {
+            "id": 73,
+            "name": "Douala ",
+            "district": "Bonapriso"
+           },
+           {
+            "id": 74,
+            "name": "Douala ",
+            "district": "Bonajinje"
+           },
+           {
+            "id": 75,
+            "name": "Douala ",
+            "district": "Bonateki"
+           },
+           {
+            "id": 76,
+            "name": "Douala ",
+            "district": "Bonakouamouang"
+           },
+           {
+            "id": 77,
+            "name": "Douala ",
+            "district": "Bonatene"
+           },
+           {
+            "id": 78,
+            "name": "Douala ",
+            "district": "Bonalembe"
+           },
+           {
+            "id": 79,
+            "name": "Douala ",
+            "district": "Bonantone"
+           },
+           {
+            "id": 80,
+            "name": "Douala ",
+            "district": "Bonajang"
+           },
+           {
+            "id": 81,
+            "name": "Douala ",
+            "district": "Hydrocarbures"
+           },
+           {
+            "id": 82,
+            "name": "Douala ",
+            "district": "Bonelang"
+           },
+           {
+            "id": 83,
+            "name": "Douala ",
+            "district": "Plateau Joss"
+           },
+           {
+            "id": 84,
+            "name": "Douala ",
+            "district": "Bonoleke"
+           },
+           {
+            "id": 85,
+            "name": "Douala ",
+            "district": "Koumassi"
+           },
+           {
+            "id": 86,
+            "name": "Douala ",
+            "district": "Bonakeke Akwa"
+           },
+           {
+            "id": 87,
+            "name": "Douala ",
+            "district": "Ngodi"
+           },
+           {
+            "id": 88,
+            "name": "Douala ",
+            "district": "Grand Moulin"
+           },
+           {
+            "id": 89,
+            "name": "Douala ",
+            "district": "Nkongmondo"
+           },
+           {
+            "id": 90,
+            "name": "Douala ",
+            "district": "Nouvelle zone d'Akwa Nord"
+           },
+           {
+            "id": 91,
+            "name": "Douala ",
+            "district": "Nouvelle zone de New-Deido"
+           },
+           {
+            "id": 92,
+            "name": "Douala",
+            "district": "Aéroport"
+           },
+           {
+            "id": 93,
+            "name": "Douala",
+            "district": "Babylone I"
+           },
+           {
+            "id": 94,
+            "name": "Douala",
+            "district": "Babylone II"
+           },
+           {
+            "id": 95,
+            "name": "Douala",
+            "district": "Bonadouma"
+           },
+           {
+            "id": 96,
+            "name": "Douala",
+            "district": "Congo"
+           },
+           {
+            "id": 97,
+            "name": "Douala",
+            "district": "Kassalafam"
+           },
+           {
+            "id": 98,
+            "name": "Douala",
+            "district": "Lagos Market"
+           },
+           {
+            "id": 99,
+            "name": "Douala",
+            "district": "Lycée de New-Bell"
+           },
+           {
+            "id": 100,
+            "name": "Douala",
+            "district": "Mbam Ewondo"
+           },
+           {
+            "id": 101,
+            "name": "Douala",
+            "district": "Ndjong-Mebi"
+           },
+           {
+            "id": 102,
+            "name": "Douala",
+            "district": "Nkololoum"
+           },
+           {
+            "id": 103,
+            "name": "Douala",
+            "district": "Ngangue"
+           },
+           {
+            "id": 104,
+            "name": "Douala",
+            "district": "Prison"
+           },
+           {
+            "id": 105,
+            "name": "Douala",
+            "district": "Sabenjongo"
+           },
+           {
+            "id": 106,
+            "name": "Douala",
+            "district": "Source"
+           },
+           {
+            "id": 107,
+            "name": "Douala",
+            "district": "T.S.F"
+           },
+           {
+            "id": 108,
+            "name": "Douala",
+            "district": "Youpwé"
+           },
+           {
+            "id": 109,
+            "name": "Douala",
+            "district": "Bonanloka"
+           },
+           {
+            "id": 110,
+            "name": "Douala",
+            "district": "Bilongue"
+           },
+           {
+            "id": 111,
+            "name": "Douala",
+            "district": "Bobongo"
+           },
+           {
+            "id": 112,
+            "name": "Douala",
+            "district": "Boko"
+           },
+           {
+            "id": 113,
+            "name": "Douala",
+            "district": "Bonadiwoto"
+           },
+           {
+            "id": 114,
+            "name": "Douala",
+            "district": "Brazzaville"
+           },
+           {
+            "id": 115,
+            "name": "Douala",
+            "district": "C.C.C."
+           },
+           {
+            "id": 116,
+            "name": "Douala",
+            "district": "Cité Berge"
+           },
+           {
+            "id": 117,
+            "name": "Douala",
+            "district": "Cité de la Paix"
+           },
+           {
+            "id": 118,
+            "name": "Douala",
+            "district": "Dibom"
+           },
+           {
+            "id": 119,
+            "name": "Douala",
+            "district": "Japoma"
+           },
+           {
+            "id": 120,
+            "name": "Douala",
+            "district": "Logbaba"
+           },
+           {
+            "id": 121,
+            "name": "Douala",
+            "district": "Brazzaville"
+           },
+           {
+            "id": 122,
+            "name": "Douala",
+            "district": "Madiba"
+           },
+           {
+            "id": 123,
+            "name": "Douala",
+            "district": "Ndogbati"
+           },
+           {
+            "id": 124,
+            "name": "Douala",
+            "district": "Ndoghem II"
+           },
+           {
+            "id": 125,
+            "name": "Douala",
+            "district": "Ndogpassi"
+           },
+           {
+            "id": 126,
+            "name": "Douala",
+            "district": "Ndogsimbi"
+           },
+           {
+            "id": 127,
+            "name": "Douala",
+            "district": "Ndokoti"
+           },
+           {
+            "id": 128,
+            "name": "Douala",
+            "district": "Nkongui"
+           },
+           {
+            "id": 129,
+            "name": "Douala",
+            "district": "Nyalla"
+           },
+           {
+            "id": 130,
+            "name": "Douala",
+            "district": "Nylon"
+           },
+           {
+            "id": 131,
+            "name": "Douala",
+            "district": "Oyack"
+           },
+           {
+            "id": 132,
+            "name": "Douala",
+            "district": "Pk 10"
+           },
+           {
+            "id": 133,
+            "name": "Douala",
+            "district": "Pk 9"
+           },
+           {
+            "id": 134,
+            "name": "Douala",
+            "district": "Pk 11"
+           },
+           {
+            "id": 135,
+            "name": "Douala",
+            "district": "Bonamoutongo"
+           },
+           {
+            "id": 136,
+            "name": "Douala",
+            "district": "Pk 7"
+           },
+           {
+            "id": 137,
+            "name": "Douala",
+            "district": "Kondi"
+           },
+           {
+            "id": 138,
+            "name": "Douala",
+            "district": "Pom Lien"
+           },
+           {
+            "id": 139,
+            "name": "Douala",
+            "district": "Sincatex"
+           },
+           {
+            "id": 140,
+            "name": "Douala",
+            "district": "So-Boum"
+           },
+           {
+            "id": 141,
+            "name": "Douala",
+            "district": "Song-Mahop"
+           },
+           {
+            "id": 142,
+            "name": "Douala",
+            "district": "Song-Ngongag"
+           },
+           {
+            "id": 143,
+            "name": "Douala",
+            "district": "Sopom"
+           },
+           {
+            "id": 144,
+            "name": "Douala",
+            "district": "Tergal"
+           },
+           {
+            "id": 145,
+            "name": "Douala",
+            "district": "Mbanga Bakoko"
+           },
+           {
+            "id": 146,
+            "name": "Douala",
+            "district": "Pk 17"
+           },
+           {
+            "id": 147,
+            "name": "Douala",
+            "district": "Pk 21"
+           },
+           {
+            "id": 148,
+            "name": "Douala",
+            "district": "Bonandale"
+           },
+           {
+            "id": 149,
+            "name": "Douala",
+            "district": "Besseke"
+           },
+           {
+            "id": 150,
+            "name": "Douala",
+            "district": "Bilingue"
+           },
+           {
+            "id": 151,
+            "name": "Douala",
+            "district": "Bonamatoumbe"
+           },
+           {
+            "id": 152,
+            "name": "Douala",
+            "district": "Bonambappe"
+           },
+           {
+            "id": 153,
+            "name": "Douala",
+            "district": "Bonaminkano"
+           },
+           {
+            "id": 154,
+            "name": "Douala",
+            "district": "Bonassama"
+           },
+           {
+            "id": 155,
+            "name": "Douala",
+            "district": "Djébalè"
+           },
+           {
+            "id": 156,
+            "name": "Douala",
+            "district": "Mambanda"
+           },
+           {
+            "id": 157,
+            "name": "Douala",
+            "district": "Ndobo"
+           },
+           {
+            "id": 158,
+            "name": "Douala",
+            "district": "Ngwele"
+           },
+           {
+            "id": 159,
+            "name": "Douala",
+            "district": "Nkomba"
+           },
+           {
+            "id": 160,
+            "name": "Douala",
+            "district": "Sodiko"
+           },
+           {
+            "id": 161,
+            "name": "Douala",
+            "district": "Bwapé"
+           },
+           {
+            "id": 162,
+            "name": "Douala",
+            "district": "Bangue"
+           },
+           {
+            "id": 163,
+            "name": "Douala",
+            "district": "Beedi"
+           },
+           {
+            "id": 164,
+            "name": "Douala",
+            "district": "Bepanda"
+           },
+           {
+            "id": 165,
+            "name": "Douala",
+            "district": "Bonabeyike"
+           },
+           {
+            "id": 166,
+            "name": "Douala",
+            "district": "Bonamoussadi (Douala)"
+           },
+           {
+            "id": 167,
+            "name": "Douala",
+            "district": "Bonangando"
+           },
+           {
+            "id": 168,
+            "name": "Douala",
+            "district": "Bonangang"
+           },
+           {
+            "id": 169,
+            "name": "Douala",
+            "district": "Cacao-Barry"
+           },
+           {
+            "id": 170,
+            "name": "Douala",
+            "district": "Cité des palmiers"
+           },
+           {
+            "id": 171,
+            "name": "Douala",
+            "district": "Cité Sic"
+           },
+           {
+            "id": 172,
+            "name": "Douala",
+            "district": "Dikahe"
+           },
+           {
+            "id": 173,
+            "name": "Douala",
+            "district": "Emene City"
+           },
+           {
+            "id": 174,
+            "name": "Douala",
+            "district": "Gentil"
+           },
+           {
+            "id": 175,
+            "name": "Douala",
+            "district": "Jourdain"
+           },
+           {
+            "id": 176,
+            "name": "Douala",
+            "district": "Kotto"
+           },
+           {
+            "id": 177,
+            "name": "Douala",
+            "district": "Lendi"
+           },
+           {
+            "id": 178,
+            "name": "Douala",
+            "district": "Logbessou"
+           },
+           {
+            "id": 179,
+            "name": "Douala",
+            "district": "Logpom"
+           },
+           {
+            "id": 180,
+            "name": "Douala",
+            "district": "Makepe"
+           },
+           {
+            "id": 181,
+            "name": "Douala",
+            "district": "Malangue"
+           },
+           {
+            "id": 182,
+            "name": "Douala",
+            "district": "Manike"
+           },
+           {
+            "id": 183,
+            "name": "Douala",
+            "district": "Mbengue City"
+           },
+           {
+            "id": 184,
+            "name": "Douala",
+            "district": "Ndogbati"
+           },
+           {
+            "id": 185,
+            "name": "Douala",
+            "district": "Ndogbong"
+           },
+           {
+            "id": 186,
+            "name": "Douala",
+            "district": "Ndoghem"
+           },
+           {
+            "id": 187,
+            "name": "Douala",
+            "district": "Ndogmbe"
+           },
+           {
+            "id": 188,
+            "name": "Douala",
+            "district": "Ngoma"
+           },
+           {
+            "id": 189,
+            "name": "Douala",
+            "district": "Nguereck"
+           },
+           {
+            "id": 190,
+            "name": "Douala",
+            "district": "Bomkul"
+           },
+           {
+            "id": 191,
+            "name": "Douala",
+            "district": "NKondi"
+           },
+           {
+            "id": 192,
+            "name": "Douala",
+            "district": "Nguibassal"
+           },
+           {
+            "id": 193,
+            "name": "Douala",
+            "district": "Sobikago"
+           },
+           {
+            "id": 194,
+            "name": "Douala",
+            "district": "Sodikombo"
+           },
+           {
+            "id": 195,
+            "name": "Douala",
+            "district": "Ndogsimbi"
+           },
+           {
+            "id": 196,
+            "name": "Douala",
+            "district": "Manoka"
+           },
+           {
+            "id": 197,
+            "name": "Douala",
+            "district": "Dahomey"
+           },
+           {
+            "id": 198,
+            "name": "Douala",
+            "district": "Number One Creek"
+           },
+           {
+            "id": 199,
+            "name": "Douala",
+            "district": "Nyangadou"
+           },
+           {
+            "id": 200,
+            "name": "Douala",
+            "district": "Mbénadikoumé"
+           },
+           {
+            "id": 201,
+            "name": "Douala",
+            "district": "Epaka I"
+           },
+           {
+            "id": 202,
+            "name": "Douala",
+            "district": "Epaka II"
+           },
+           {
+            "id": 203,
+            "name": "Douala",
+            "district": "BuBessoukoudou"
+           },
+           {
+            "id": 204,
+            "name": "Douala",
+            "district": "Moukala Tanda"
+           },
+           {
+            "id": 205,
+            "name": "Douala",
+            "district": "Kombo"
+           },
+           {
+            "id": 206,
+            "name": "Douala",
+            "district": "Bouma"
+           },
+           {
+            "id": 207,
+            "name": "Douala",
+            "district": "Moungangué"
+           },
+           {
+            "id": 208,
+            "name": "Douala",
+            "district": "Kombo Moukoko"
+           },
+           {
+            "id": 209,
+            "name": "Douala",
+            "district": "Poka I,"
+           },
+           {
+            "id": 210,
+            "name": "Douala",
+            "district": "Akra Kombo"
+           },
+           {
+            "id": 211,
+            "name": "Douala",
+            "district": "Cap Cameroun,"
+           },
+           {
+            "id": 212,
+            "name": "Douala",
+            "district": "Petit Toubé"
+           },
+           {
+            "id": 213,
+            "name": "Douala",
+            "district": "Bikoro"
+           },
+           {
+            "id": 214,
+            "name": "Douala",
+            "district": "Koo"
+           },
+           {
+            "id": 215,
+            "name": "Douala",
+            "district": "Missipi"
+           },
+           {
+            "id": 216,
+            "name": "Douala",
+            "district": "Matanda Massadi"
+           }
+    ]
+}

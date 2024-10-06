@@ -1,0 +1,60 @@
+@import '../../utils//utils.scss';
+
+.filter-row {
+    background-image: linear-gradient(to top right, rgba(white, 0.9), rgba(white, 0.9)), 
+    url('../../../assets//images/event.png');
+    background-position: center;
+    padding-top: 1.8rem;
+    background-repeat: no-repeat;
+    
+    .filter {
+    
+        .react-datepicker, .react-datepicker-popper {
+            z-index: 1000 !important;
+        }
+        
+        .form-group {
+            position: relative;
+            
+            input, select {
+                width: 100% !important;
+                border: solid 1px rgba($maincolor, 0.4) !important;
+                border-radius: 2px !important;
+                background-color: white;
+                &::placeholder {
+                    color: #666;
+                    font-size: 1.25rem;
+                }
+                &:focus {
+                    box-shadow: inset 0 -1px 0 rgba($maincolor, 0.4);
+                    border-bottom: solid 1px $maincolor !important;
+                }
+            }
+            .react-datepicker-wrapper {
+                width: 100% !important;
+            }
+            label {
+                position: absolute;
+                top: -1.1rem;
+                color: $maincolor;
+            }
+            #cat {
+                top: -1.6rem !important;
+            }
+        }
+    
+        .button {
+            padding: .7rem 1.5rem !important;
+            border-radius: 2px !important;
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
+    
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
+}

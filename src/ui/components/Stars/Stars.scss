@@ -1,0 +1,43 @@
+.stars{
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+
+    .dark {
+        path {
+            fill: black;
+        }
+        &:hover path {
+            fill: orangered ;
+        }
+    }
+
+    .voted {
+        path {
+            fill: green !important;
+        }
+    }
+
+    svg {
+        margin-right: .5rem;
+        cursor: pointer;
+        path {
+            fill: orange ;
+        }
+        &:hover path {
+            fill: orangered ;
+        }
+    }
+
+    .votes {
+        font-size: 1.25rem;
+        margin-top: .25rem;
+        @media only screen and (max-width: 600px) {
+            font-size: 1.05rem;
+        }
+    }
+    .voteswhite {
+        color: white !important;
+        font-size: 1.2rem;
+    }
+}

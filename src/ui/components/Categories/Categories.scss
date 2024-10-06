@@ -1,0 +1,146 @@
+@import '../../utils//utils.scss';
+
+.categories {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.93), rgba(255,255,255,0.93)), 
+    url("./../../../assets/images/bg3.jpg"), ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+    .container {
+        width: 100%;
+        @media only screen and(max-width: 992px) {
+            width: 95% !important;
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        @media only screen and(min-width: 576px) {
+            width: 100% !important;
+        }
+    }
+    
+    .categories-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        @media only screen and(max-width: 992px) {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding-left: 1rem; 
+            padding-right: 1rem;
+            padding-bottom: 0 !important;
+        }
+    }
+    .wrimagecard{	
+        margin: 0 .5rem 1.5rem .5rem;
+        text-align: left;
+        position: relative;
+        background: #fff;
+        box-shadow: 5px 5px 10px 0px rgba(46,61,73,0.15);
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        width: 13rem;
+
+        @media only screen and(max-width: 1200px) {
+            margin: 0 .3rem 1.5rem .3rem;
+            width: 11.5rem;
+        }
+        @media only screen and(max-width: 992px) {
+            width: 11.5rem;
+            margin: 0 .7rem 1.5rem .7rem;
+            flex-shrink: 0 !important;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+            @media only screen and(max-width: 1024px) {
+                margin-right: 0;
+            }
+        }
+        @media only screen and(max-width: 500px) {
+            width: 30% !important;
+        }
+
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+
+    }
+    .wrimagecard .fa {
+        position: relative;
+        font-size: 65px;
+    }
+    .wrimagecard-topimage_header{
+        padding: 20px;
+        background-color:rgba($maincolor, 0.1);
+    }
+    svg {
+        @media only screen and(max-width: 600px) {
+            font-size: 2rem !important;
+        }
+        path {
+            fill: $maincolor !important;
+        }
+    }
+    a.wrimagecard:hover, .wrimagecard-topimage:hover {
+        box-shadow: 2px 3px 6px 0px rgba(46,61,73,0.2);
+    }
+    .wrimagecard-topimage a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .wrimagecard-topimage_title {
+        padding: 1.4rem;
+        height: 8rem;
+        padding-bottom: 0.75rem;
+        position: relative;
+        @media only screen and(max-width: 900px) {
+            padding: 1.3rem;
+        }
+        @media only screen and(max-width: 600px) {
+            height: 7rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.4rem;
+            @media only screen and(max-width: 600px) {
+                font-size: 1.25rem;
+            }
+        }
+        .selected {
+            color: $maincolor !important;
+            font-size: 1.4rem;
+            font-weight: bold;
+            @media only screen and(max-width: 600px) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    .wrimagecard-topimage a {
+        border-bottom: none;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .col-xs-4 {
+        width: 50% !important;
+    }
+
+    .menu-item {
+        padding: 0 40px;
+        margin: 5px 10px;
+        user-select: none;
+        cursor: pointer;
+        border: none;
+    }
+       
+    .scroll-menu-arrow {
+        padding: 20px;
+        cursor: pointer;
+    }
+}

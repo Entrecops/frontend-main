@@ -1,0 +1,113 @@
+.dashboard {
+    margin-bottom: 7rem;
+
+    .container {
+        @media only screen and (max-width: 900px) {
+            padding: 2rem !important;
+        }
+    }
+
+    
+    h2 {
+        @media only screen and (max-width: 900px) {
+            font-size: 1.5rem;
+        }
+    }
+    .add-buttom-wrapper {
+        button {
+            margin-left: 1rem;
+            @media only screen and (max-width: 1024px) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                font-size: 1.2rem;
+            }
+            @media only screen and (max-width: 600px) {
+                margin-left: 0 !important;
+                margin-top: 1rem;
+                font-size: 1.2rem;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            flex-direction: column !important;
+        }
+    }
+
+    .container {
+        background-color: white;
+        border: solid 1px #eee;
+        box-shadow: 0px 5px 10px #eee;
+        border-radius: 3px;
+    }
+
+    .list-group {
+        box-shadow: 0px 3px 13px#eee;
+        border-radius: 4px;
+        a {
+            font-size: 1.4rem;
+            padding-top: 1.3rem;
+            padding-bottom: 1.3rem;
+            font-weight: 600;
+        }
+
+        .active {
+            background-color: #33475B;
+            border-color: #33475B;
+        }
+        .list-group-item {
+            @media only screen and (max-width: 600px) {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    table {
+        border: solid 1px #e2e2e2;
+        box-shadow: 0px 3px 13px#eee;
+        border-radius: 4px;
+
+        thead {
+            padding: 8rem;
+        }
+        th {
+            font-size: 1.35rem;
+            padding-top: 1.33rem;
+            padding-bottom: 1.33rem;
+            text-align: center;
+        }
+        td {
+            font-size: 1.3rem;
+            vertical-align: middle !important;
+            @media only screen and (max-width: 600px) {
+                font-size: 1rem;
+            }
+        }
+        .date {
+            @media only screen and (max-width: 600px) {
+                display: none;
+            }
+        }
+    }
+
+    .deleteWrapper {
+        button {
+            font-size: 1.4rem;
+            box-shadow: 0px 5px 10px #eee;
+            @media only screen and (max-width: 600px) {
+                font-size: 1.15rem;
+            }
+            svg {
+                path {
+                    fill: white !important;
+                }
+            }
+        }
+    }
+
+    
+}
+
+.create-form {
+    input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
+            width: 100% !important;
+        }
+}

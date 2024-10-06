@@ -1,0 +1,51 @@
+.searchResult-list {
+    position: absolute;
+    z-index: 200;
+    width: 90%;
+    margin-top: -.35rem;
+    background-color: white;
+    @media only screen and (max-width: 600px) {
+        width: 100% !important;
+    }
+}
+
+.searchResult-item{
+        border: solid 1px #e2e2e2;
+        padding: .5rem 1.5rem;
+        text-decoration: none;
+        background-color: white;
+        text-decoration-line: none !important;
+        z-index: 300;
+        
+        &:hover {
+            background-color: #f5f8fa;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+        span {
+            font-size: 1.3rem;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        @media only screen and (max-width: 600px) {
+            h3 {
+            font-size: 1.3rem;
+            }
+            span {
+                font-size: 1rem;
+            }
+            img {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+            }
+        }
+    &:not(:first-child) {
+        border-top: none !important;
+    }
+}

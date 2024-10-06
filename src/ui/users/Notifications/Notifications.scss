@@ -1,0 +1,74 @@
+@import '../../utils/utils.scss';
+
+.rec-section {
+    padding-top: .5rem;
+    .container {
+        background-color: white;
+        padding: 6rem 5rem;
+        border-radius: 8px;
+        border: solid 1px #eee;
+
+        .noti-link {
+            padding: 1rem 2.5rem;
+            border: solid 1px rgb(230, 230, 230);
+            text-decoration: none;
+            align-items: center;
+            
+            h3{
+                font-weight: 600;
+            }
+
+            &:hover {
+                background-color: white;
+                cursor: pointer;
+            }
+
+            img {
+                width: 5rem;
+                height: 5rem;
+                margin-right: 1.5rem;
+            }
+        }
+        .noti-link:not(:last-child) {
+            border-bottom: none !important;
+        }
+        .notvisited {
+            background-color: #f7f7fc;
+        }
+    }
+}
+
+.recommandations {
+    width: 25rem;
+    background-color: white;
+    margin-right: 0 !important;
+
+    .notvisited {
+        background-color: #f5f8fa;
+    }
+    .rec-item {
+        border-bottom: solid 1px #eee;
+        padding: 1.3rem 2rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+        }
+        
+        h4 {
+            font-weight: 600;
+            font-size: 1.45rem;
+        }
+        h6 {
+            font-size: 1.2rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        label {
+            color: $maincolor;
+            font-size: 1rem;
+            margin-bottom: 0 !important;
+        }
+    }
+}

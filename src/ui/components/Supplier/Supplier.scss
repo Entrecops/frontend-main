@@ -1,0 +1,61 @@
+@import '../../utils/utils.scss';
+
+.bannerwrapper {
+    background: linear-gradient(to bottom, rgba($maincolor,.96), rgba($maincolor,.96)), url("./../../../assets/images/bg2.jpg"), ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    .banner {
+        h2 {
+            @media only screen and (max-width: 767px) {
+                text-align: center;
+            }
+        }
+        h2 > b {
+            color: white !important;
+            font-size: 3.4rem;
+            @media only screen and (max-width: 900px) {
+                font-size: 2rem;
+                text-align: center !important;
+            }
+        }
+        img {
+            width: 75%;
+        }
+        a {
+            font-size: 1.8rem !important;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            @media only screen and (max-width: 900px) {
+                font-size: 1.4rem !important;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-align: center !important;
+            }
+            @media only screen and (max-width: 767px) {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+            }
+
+            &:hover {
+                color: $maincolor !important;
+                border-color: $maincolor !important;
+            }
+        }
+    }
+}
+
+.supplier-view-page {
+
+    .banner {
+        img {
+            width: 70%;
+        }
+        .supplierdemand {
+            color: white !important;
+        }
+    }
+}

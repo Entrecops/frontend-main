@@ -1,0 +1,62 @@
+.payment_section {
+    margin-top: 5rem;
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (max-width: 600px) {
+            flex-direction: column !important;
+        }
+
+        .stat_item {
+            background-color: white;
+            padding: 3rem 4rem;
+            width: 30%;
+            border-bottom: solid 5px #101d2c;
+            h2 {
+                font-size: 2.1rem;
+                @media only screen and (max-width: 600px) {
+                    font-size: 1.8rem;
+                }
+            }
+            p {
+                font-size: 1.7rem;
+            }
+            h3 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 0;
+                @media only screen and (max-width: 600px) {
+                    font-size: 2rem;
+                }
+            }
+            h3 span {
+                color: rgb(18, 146, 18);
+            }
+            h3 .fc {
+                font-size: 1.5rem;
+                color: #444;
+            }
+            .red {
+                color: red !important;
+            }
+        }
+    }
+}
+
+
+.payments_historic {
+    margin-top: 7rem !important;
+    td,th {
+        font-size: 1.6rem;
+    }
+}
+
+.modalo {
+    table {
+        td, th {
+            font-size: 1.6rem;
+            text-align: left;
+        }
+    }
+}

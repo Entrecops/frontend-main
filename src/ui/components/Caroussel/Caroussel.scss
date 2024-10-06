@@ -1,0 +1,64 @@
+.carousel-item{
+    @media only screen and (min-width: 900px) {
+        height: 90vh;
+        
+        img{
+            height: 100%;
+        }
+    }
+}
+
+.carousel-inner {
+    h1 {
+        color: white;
+        font-size: 4.5rem;
+        font-weight: bold;
+        width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: uppercase;
+        @media only screen and (max-width: 1050px) {
+            font-size: 4rem;
+        }
+        @media only screen and (max-width: 900px) {
+            width: 100% !important;
+        }
+        @media only screen and (max-width: 700px) {
+            font-size: 3rem;
+        }
+    }
+    p {
+        font-size: 1.4rem;
+        color: white;
+    }
+    a {
+        font-size: 1.8rem !important;
+        font-weight: 600;
+        padding: 1rem 4rem;
+        min-width: 15rem;
+        color: white;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 900px) {
+            font-size: 1.6rem !important;
+        }
+    }
+
+    #carousel-caption {
+        margin-bottom: 12rem !important;
+        background-color: rgba(0,0,0, 0.5);
+        margin-left: 5rem;
+        margin-right: 5rem;
+        padding: 8rem 3rem;
+        border-radius: 8px;
+
+        @media only screen and (min-width: 1600px) {
+            margin-bottom: 21rem !important;
+        }
+        @media only screen and (max-width: 900px) {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+    }
+}

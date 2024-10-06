@@ -1,0 +1,41 @@
+@import '../../utils/utils.scss';
+
+
+.supplier-registration-form {
+    padding: 6rem 4rem;
+    background-color: white;
+    box-shadow: 0 15px 2rem #eee;
+
+    .form-group {
+        label {
+            display: block;
+            font-size: 1.3rem;
+        }
+
+        input {
+            font-size: 1.4rem;
+            width: 100%;
+            border: 1px solid #ced4da;
+            background-color: white;
+        }
+        textarea {
+            font-size: 1.4rem;
+        }
+    }
+
+    .button {
+        width: 100% !important;
+    }
+    
+    input[type=submit] {
+        @media only screen and (max-width: 600px) {
+            width: 100% !important;
+        }
+    }
+    img {
+        height: 20rem;
+        width: 20rem !important;
+        vertical-align: middle !important;
+        border-radius: 50%;
+    }
+}

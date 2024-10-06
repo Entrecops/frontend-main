@@ -1,0 +1,348 @@
+@import '../../utils/utils.scss';
+
+.container {
+    @media only screen and (max-width: 992px) {
+        max-width: 100% !important;
+    }
+}
+
+#projectdetails  {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+#projectdetails .left {
+    padding: 2rem;
+    padding-left: 0 !important;
+
+    @media only screen and (max-width: 768px) {
+        padding-left: 2rem !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 1rem !important;
+    }
+
+    textarea {
+        font-size: 1.5rem;
+    }
+
+    .aws-sld__controls__arrow-left:after, .aws-sld__controls__arrow-right:after {
+        background-color: $maincolor !important;
+    }
+    .aws-sld__controls__arrow-left:after, .aws-sld__controls__arrow-right:before {
+        background-color: $maincolor !important;
+    }
+    .aws-sld__controls__arrow-left:before {
+        background-color: $maincolor !important;
+    }
+}
+#projectdetails .left .aws-sld__content {
+    background-color: transparent !important;
+}
+#projectdetails .left .aws-sld__bullets {
+    bottom: -1rem !important;
+}
+
+#projectdetails .right {
+    padding: 2rem;
+    padding-right: 0 !important;
+
+    @media only screen and (max-width: 768px) {
+        padding-right: 2rem !important;
+    }
+}
+
+#projectdetails .left img{
+    // height: 40rem;
+    width: 100%;
+
+    @media only screen and (max-width: 900px) {
+        // height: 25rem;
+    }
+}
+
+#projectdetails .left .titleandstars{
+    @media only screen and (max-width: 1023px) {
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+}
+
+#projectdetails .left .infos{
+    background-color: white;
+    border: solid 1px #eee;
+}
+
+#projectdetails .left .otherinfos{
+    padding: 0 2rem 2rem 2rem;
+
+    p{
+        font-size: 1.3rem;
+    }
+}
+#projectdetails .left .founds{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#projectdetails .description img{
+    width: 100% !important;
+}
+#projectdetails .description iframe {
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    #projectdetails .left h2{
+        margin-top: 1rem !important;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    #projectdetails .left .titleandstars h5{
+        text-align: center !important;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #projectdetails .left h2{
+        margin-top: 2rem !important;
+    }
+}
+
+#projectdetails .left h2{
+    margin-top: 2.5rem;
+    font-weight: 600;
+    font-size: 2.3rem;
+    color: $fontColor;
+}
+
+#projectdetails .left .socialBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+}
+#projectdetails .left .shareButtons{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#projectdetails .left .moreinfos{
+    margin-top: -2rem;
+
+    @media only screen and (max-width: 1023px) {
+        flex-direction: column !important;
+    }
+}
+
+#projectdetails .left .moreinfos .headers{
+    display: flex;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+#projectdetails .left .moreinfos .content{
+    padding: 2rem 3rem 0 3rem;
+}
+#projectdetails .left .form-content {
+    padding: 0 1.6rem;
+    margin-top: 2.5rem;
+
+    input {
+        font-size: 1.4rem;
+    }
+
+    textarea {
+        font-size: 1.4rem;
+        border-radius: 5px;
+    }
+
+    p {
+        font-size: 1.35rem;
+    }
+}
+#projectdetails .left .reviews p {
+    border-bottom: solid 1px #eee;
+    padding-bottom: 1.5rem;
+}
+#projectdetails .left .send-btn{
+    margin-top: 1.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    min-width: 13rem;
+    margin-left: auto;
+    box-shadow: 0 4px 10px #e2e2e2;
+    display: block;
+    @media only screen and (max-width: 767px) {
+        width: 100%;
+    }
+
+    svg {
+        margin-left: 1rem;
+        path {
+            color: white;
+        }
+    }
+}
+
+#projectdetails .left #right-mobile {
+    @media only screen and (max-width: 767px) {
+        padding-top: 0;
+    }
+}
+#projectdetails .left #right-mobile h2 {
+    @media only screen and (max-width: 767px) {
+        margin-top: .2rem !important;
+    }
+}
+#projectdetails .left #right-mobile .infos {
+    @media only screen and (max-width: 767px) {
+        border: none !important;
+    }
+}
+
+#projectdetails .right-desktop {
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
+}
+#projectdetails .right-mobile {
+    @media only screen and (min-width: 767px) {
+       display: none;
+    }
+}
+
+#projectdetails .right {
+    .infos {
+        padding: 4rem 2.5rem;
+        background-color: white;
+        border: solid 1px #eee;
+        @media only screen and (max-width: 767px) {
+            padding: 0 !important;
+        }
+
+        svg {
+            margin-right: 1.5rem;
+
+            path {
+                fill: $maincolor !important;
+            }
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: .15rem;
+        }
+
+        .book {
+            width: 100%;
+        }
+        .reccommand {
+            background-color: $fontColor;
+            width: 100%;
+        }
+
+        .button {
+            @media only screen and (max-width: 1000px) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    }
+
+    .other-infos {
+        padding: 4rem 2.5rem;
+        background-color: white;
+        border: solid 1px #eee;
+        @media only screen and (max-width: 767px) {
+            padding: 2rem 0 !important;
+            border: none !important;
+        }
+
+        .button {
+            @media only screen and (max-width: 1000px) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                font-size: 1.35rem;
+            }
+        }
+
+        p {
+            font-size: 1.3rem;
+            text-align: justify;
+        }
+        h3 {
+            font-weight: 600;
+        }
+
+        .owner {
+            @media only screen and (max-width: 768px) {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+            }
+        }
+    }
+
+
+    video {
+        cursor: pointer;
+    }
+
+}
+
+.modal-content {
+    .modal-title {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1.4rem !important;
+        font-weight: 600;
+    }
+
+    input {
+        width: 100% !important;
+    }
+
+    .search {
+        svg {
+            margin-left: -3.5rem;
+            font-size: 1.7rem;
+        }
+    }
+
+    .searchInput {
+        border: solid 1px #e2e2e2;
+        padding: 1.8rem;
+
+        &:focus {
+            border-bottom: none;
+        }
+    }
+    .download-btn {
+        svg {
+            margin-left: 1rem;
+            path {
+                fill: white;
+            }
+        }
+    }
+}
+
+// For coupons
+#couponstodownload {
+
+}
+
+.social-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.social-icons-container > *:not(:last-child) {
+    margin-right: 30px; /* Ajouter une marge à droite pour espacer les icônes */
+}

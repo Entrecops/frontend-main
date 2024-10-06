@@ -1,0 +1,320 @@
+@import '../utils/utils.scss';
+
+.main-container {
+    display: flex;
+    @media only screen and (max-width: 900px) {
+        flex-direction: column;
+    }
+    .left-content {
+        width: 15%;
+        background-color: #343A40;
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        padding: 3rem;
+        @media only screen and (max-width: 1600px) {
+            width: 20%;
+        }
+        @media only screen and (max-width: 1200px) {
+            width: 25%;
+        }
+        @media only screen and (max-width: 900px) {
+            position: relative;
+            flex: 1;
+            width: 100%;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        * {
+            color: white !important;
+        }
+        img {
+            
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+            .navbar-brand {
+                margin-top: 1.8rem;
+                padding-bottom: .8rem;
+                border-bottom: 3px solid transparent;
+                transition: all .3s ease-in;
+
+                &:hover {
+                    border-bottom: solid 3px orangered;
+                }
+            }
+            .active {
+                border-bottom: solid 3px orangered;
+            }
+        }
+        .logout {
+            &:hover {
+                color: $fontColor !important;
+            }
+        }
+    }
+
+
+
+    .right-content {
+        width: 85%;
+        margin-left: 15%;
+        padding: 3rem;
+        @media only screen and (max-width: 1600px) {
+            width: 80%;
+            margin-left: 20%;
+        }
+        @media only screen and (max-width: 1200px) {
+            width: 75%;
+            margin-left: 25%;
+        }
+        @media only screen and (max-width: 900px) {
+            flex: 1;
+            width: 100%;
+            margin-left: 0;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+
+        .stat-item {
+            display: flex;
+            margin-left: 1rem;
+            background-color: $fontColor;
+            padding: .5rem 1.5rem;
+            border-radius: 20px;
+            h4 {
+                margin-left: .5rem;
+                color: white !important;
+                margin-bottom: 0 !important;
+                @media only screen and (max-width: 900px) {
+                    font-size: 1.3rem;
+                }
+            }
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+
+        .card {
+            .card-body {
+                padding: 2rem 1.5rem;
+                h5 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 1.4rem;
+                }
+                a {
+                    font-size: 1.3rem;
+                }
+                .upload-btn {
+                    svg {
+                        path {fill: white;}
+                    }
+                }
+            }
+        }
+    }
+
+    .title {
+        margin-bottom: 2rem;
+    }
+
+    table {
+        border: 1px solid #eee !important;
+        background-color: white !important;
+        th {
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center !important;
+            @media only screen and (max-width: 900px) {
+                font-size: 1.25rem;
+            }
+            @media only screen and (max-width: 600px) {
+                font-size: 1.15rem;
+            }
+        }
+        td {
+            font-size: 1.3rem;
+            text-align: center !important;
+            margin-bottom: 0 !important;
+            @media only screen and (max-width: 900px) {
+                font-size: 1.25rem;
+            }
+            @media only screen and (max-width: 600px) {
+                font-size: 1.15rem;
+            }
+        }
+    }
+
+    #searchbar {
+        background-color: white;
+        border-radius: 50px;
+        height: 4rem;
+        border: solid 1px #eee;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    form {
+        #category {
+            height: 3rem;
+            option {
+                font-size: 1.4rem !important;
+            }
+        }
+
+    }
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+        font-size: 1.7rem !important;
+        color: #333333 !important;
+    }
+    .nav-tabs .nav-link {
+        color: black !important;
+        font-weight: bold;
+        font-size: 1.4rem;
+        min-width: 20rem;
+        text-align: center;
+    }
+    .nav-tabs {
+        justify-content: center !important;
+    }
+}
+
+
+.supplier-form {
+    img {
+        height: 20rem !important;
+        width: 20rem !important;
+        vertical-align: middle !important;
+        border-radius: 50%;
+    }
+}
+
+/* Upload modal */
+.updload-section {
+    .container {
+        background-color: white;
+        border-radius: 8px;
+
+        .upload {
+            @media only screen and (max-width: 768px) {
+
+            }
+        }
+
+        svg {
+            margin-right: 1.5rem;
+            @media only screen and (max-width: 768px) {
+                font-size: 3rem;
+            }
+        }
+
+        label {
+            font-size: 1.5rem;
+        }
+    
+        textarea {
+            border-radius: 10px;
+            font-size: 1.4rem;
+            padding: .3rem 2rem;
+            @media only screen and (max-width: 800px) {
+                width: 50%;
+            }
+        }
+    
+        button {
+            width: 20%;
+            @media only screen and (max-width: 800px) {
+                width: 30%;
+                padding: 1rem .2rem;
+            }
+            svg {
+                @media only screen and (max-width: 800px) {
+                    font-size: 1.6rem !important;
+                    margin: 0;
+                    padding: 0;
+                }
+                path {
+                    fill: white;
+                }
+            }
+        }
+
+    }
+
+}
+
+.reservations-list {
+    td {
+        font-size: 1.5rem;
+    }
+}
+
+.deleteWrapper {
+    svg {
+        path {
+            fill: white;
+        }
+    }
+}
+
+.user-list, .supplier-list {
+    max-height: 40rem;
+    overflow-y: scroll;
+}
+
+.send-email-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+.user-email-item {
+    font-size: 1.2rem;
+    padding: .4rem 1rem;
+    border: solid 1px #f5d8fa;
+    box-shadow: 0px 4px 5px #eee;
+    margin: .1rem;
+    border-radius: 10px;
+}
+
+.user-check-verify, .supplier-check-verify {
+    position: relative;
+    top: .23rem;
+    left: .3rem;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
+    width: 100% !important;
+}
+
+.DraftEditor-root{
+    min-height: 20rem !important;
+    max-height: 40rem !important;
+    padding: 1rem 2rem;
+    border: solid 1px #eee;
+    font-size: 1.5rem;
+    background-color: #f5f8fa;
+}
+
+.export-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 1.6rem;
+}
+
+.react-datepicker-wrapper {
+    width: 100% !important;
+}
+
+.react-datepicker {
+    font-size: 1.2rem !important;
+}

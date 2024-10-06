@@ -1,0 +1,133 @@
+@import '../../utils/utils.scss';
+
+.bgWhite {
+    background-color: white;
+}
+
+.events {
+    .event-header {
+        font-size: 2.6rem;
+
+        @media only screen and (max-width: 900px){
+            font-size: 1.9rem;
+        }
+    }
+
+    .header-wrapper {
+         @media only screen and (max-width: 900px){
+            flex-direction: column !important;
+            .filter {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+    
+    .home{
+        background-color: white !important;
+        border: solid 1px #eee;
+        box-shadow: 0px 10px 10px #e2e2e2;
+        text-decoration: none;
+        position: relative;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 3.5rem;
+
+        .custom-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: white;
+            z-index: 10;
+            font-size: 1.15rem;
+            margin-bottom: 0 !important;
+            padding-bottom: .5rem;
+        }
+    
+        &__img{
+            width: 100%;
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            z-index: 1;
+            height: 15rem;
+        }
+    
+        &_name{
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            justify-self: center;
+            align-self: end;
+    
+            width: 80%;
+            font-size: 1.45rem;
+            text-align: center;  
+            padding: 1.25rem;
+            background-color: #101d2c;
+            color: white;
+            font-weight: 400;
+            z-index: 2;
+            transform: translateY(50%);
+        }
+    
+        &_content {
+            grid-column: 1/-1;
+            p {
+                font-size: 1.35rem;
+                margin-left: 1.2rem;
+                margin-right: 1.2rem;
+                height: 4rem !important;
+            }
+        }
+    
+        &__btn{ 
+            grid-column: 1/-1;
+        }
+    }
+    
+    .btn{
+        background-color: $maincolor;
+        color: #fff;
+        border: none;
+        border-radius: 0; 
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        transition: all .2s;
+    
+        &:hover{
+            background-color: $maincolor;
+            color: white;
+        }
+    }
+
+    .all_events {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            font-size: 1.5rem;
+            color: #101d2c;
+            transition: .1s ease-in;
+            text-decoration: underline;
+            margin-right: .5rem;
+
+            &:hover{
+                color: #132436;
+            }
+        }
+        svg {
+            font-size: 1.3rem;
+            margin-top: .3rem;
+        }
+    }
+
+    .see-more {
+        a {
+            font-size: 1.1rem !important;
+            border-radius: 20px;
+            padding: .8rem 1.5rem;
+        }
+    }
+}

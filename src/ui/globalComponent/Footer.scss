@@ -1,0 +1,50 @@
+footer {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+
+    .col-sm-12:not(:first-child) {
+        @media (max-width: 600px) {
+            margin-top: 4rem;
+            text-align: center;
+        }
+    }
+
+    .col-sm-12 {
+
+        h4 {
+            font-size: 1.9rem;
+            text-align: center;
+        }
+
+        p {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 2rem;
+            text-align: center;
+
+            li {
+                margin-top: 1rem;
+                font-size: 1.5rem;
+                color: white;
+                b {
+                    color: white;
+                }
+                a {
+                    font-size: 1.5rem;
+                    color: white;
+                }
+
+                img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

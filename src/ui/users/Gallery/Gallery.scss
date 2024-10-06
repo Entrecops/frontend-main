@@ -1,0 +1,111 @@
+@import '../../utils/utils.scss';
+
+.publications-section {
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+
+    .container {
+        background-color: white;
+        padding: 7rem 6rem;
+        border-radius: 8px;
+
+        @media only screen and (max-width:900px) {
+            padding: 5rem 2rem;
+        }
+    }
+}
+
+.gallery-row {
+    border-top: solid 1px #eee;
+}
+
+.gallery-item {
+    &:not(:first-child) {
+        padding-top: 3rem;
+        margin-top: 4.5rem;
+        border-top: solid 1px #eee;
+    }
+
+    
+
+    .header {
+        margin-bottom: 1rem;
+        svg {
+            margin-right: 1rem;
+        }
+        h5 {
+            margin-bottom: 0 !important;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+
+    .body {
+       
+    }
+}
+.content_13hv8io {
+    svg {
+        margin-right: 1rem;
+        path {
+            fill: white !important;
+        }
+    }
+    button {
+        font-size: 1.6rem;
+        @media only screen and (max-width:900px) {
+            font-size: 1.45rem;
+        }
+    }
+}
+
+.publications-section-banner {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, rgba($maincolor,0.85), rgba($maincolor,0.85)), url('./../../../assets/images/im.jpg');
+    background-position: center;
+    h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        @media only screen and (max-width: 600px){
+            width: 85%;
+        }
+        input {
+            height: 4rem;
+            font-size: 1.5rem;
+            box-shadow: none !important;
+            transition: transform .3s;
+            border-radius: 18px;
+            padding: 1rem 2rem;
+            &:focus {
+                border: solid white 1px;
+                transform: translateY(-5px);
+                transform: scale(1.02)
+            }
+            &::placeholder {
+                color: #333;
+            }
+        }
+        svg {
+            position: absolute;
+            right: 7rem;
+            cursor: pointer;
+            top: 1.5rem;
+            path {
+                fill: rgba($maincolor,1);
+            }
+        }
+    }
+}
