@@ -8,9 +8,6 @@ import axios from 'axios';
 import './Admin.scss';
 import logo from '../../assets/images/logo.png';
 import Hoc from '../globalComponent/Hoc';
-import socketIOClient from "socket.io-client";
-import {rootUrl} from '../../configs/config';
-import {Notification, addNotification} from '../globalComponent/Notifications';
 
 import Loader from '../globalComponent/Loader';
 import ReactLoader from '../globalComponent/ReactLoader';
@@ -60,17 +57,6 @@ class Admin extends Component {
             .catch(err => {
                 this.setState({ error: "Une érreur s'est produite. Veuillez reéssayer.", loadingUsers: false })
             })
-
-            // Connecter à Socket.IO
-            this.socket = socketIOClient(rootUrl); // Assurez-vous que l'URL correspond à votre configuration serveur
-            this.socket.on('newReservation', (reservation) => {
-                // Afficher une notification
-                addNotification("success", "New service reservation received !", "New reservation have been made by a client for a service");
-            });
-            this.socket.on('newReservation1', (reservation) => {
-                // Afficher une notification
-                addNotification("success", "New Event reservation received !", "New reservation have been made by a client for an Event");
-            });
     }
 
     logout = () => {
@@ -83,7 +69,6 @@ class Admin extends Component {
         const {nSuppliers, nUsers, loadingSuppliers, loadingUsers} = this.state;
         return (
             <Hoc>
-                <Notification />
                 {user&&user.role !== "admin" ? <Redirect to="/" />:null }
                 {this.state.redirect ? <Redirect to="/" /> : null}
                 <section className="admin">
@@ -129,7 +114,7 @@ class Admin extends Component {
                                 <NavLink className="navbar-brand" to="/admin/backup">
                                     <h3 className="d-inline align-middle"> DATA BACKUP</h3>
                                 </NavLink>
-                                <a href="#logout" onClick={this.logout} className="mt-auto btn btn-outline-light btn-lg logout">Logout</a>
+                                <a href="#logout" onClick={this.logout} className="mt-auto btn btn-outline-light btn-lg logout">DECONNEXION</a>
                             </div>
                         </div>
                         <div className="right-content">

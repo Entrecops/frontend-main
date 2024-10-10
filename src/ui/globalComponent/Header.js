@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux';
 import { logout } from '../../store/actions';
-import { faSearch, faBookmark, faBell} from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import './Header.scss';
 import logo from '../../assets/images/logo.png';
 // import socketIOClient from 'socket.io-client';
@@ -133,7 +133,7 @@ class Header extends PureComponent {
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/admin/home">
                                             Admin Dashboard
-                                            <FontAwesomeIcon icon={faBell} size={"1x"} /><sup className="ml-1">{newReservationCount}</sup>
+                                            <FontAwesomeIcon icon={faBookmark} size={"1x"} className='ico'/><sup className="ml-1">{newReservationCount}</sup>
                                         </NavLink>
                                     </li>:null
                                 }
@@ -142,7 +142,7 @@ class Header extends PureComponent {
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/dashboard/reservations">
                                             Dashboard
-                                            <FontAwesomeIcon icon={faBell} size={"1x"} /><sup className="ml-1">{newReservationCount}</sup>
+                                            <FontAwesomeIcon icon={faBookmark} size={"1x"} className='ico'/><sup className="ml-1">{newReservationCount}</sup>
                                         </NavLink>
                                     </li>:null
                                 }
@@ -163,7 +163,7 @@ class Header extends PureComponent {
                                     <li className="nav-item rec-item-desktop">
                                         <div className="dropdown mt-2">
                                             <a href="/recommandations" className=""  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <FontAwesomeIcon icon={faBell} size={"1x"} /><sup className="ml-1">{nNotifications}</sup>
+                                                <FontAwesomeIcon icon={faBookmark} size={"1x"} /><sup className="ml-1">{nNotifications}</sup>
                                             </a>
                                             {user.recommandations && user.recommandations.length ?
                                                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">

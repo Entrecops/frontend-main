@@ -39,10 +39,10 @@ class Footer extends Component {
 
                             <ul className="row pt-1">
 
-                                <li className='col-sm-3'><SocialIcon url="https://www.facebook.com/Entre-Cops-101914647857273/" target="_blank" size={30} /></li>
-                                <li className='col-sm-3'><SocialIcon url="https://www.instagram.com/xxxxx/" target="_blank" size={30} /></li>
-                                <li className='col-sm-3'><SocialIcon url="https://www.linkedin.com/xxxxx/" target="_blank" size={30}/></li>
-                                <li className='col-sm-3'><SocialIcon url="https://wa.me/237xxxxxxx" target="_blank" size={30}/></li>
+                                <li className='col-sm-3'><SocialIcon url="https://www.facebook.com/Entre-Cops-101914647857273/" target="_blank" size={10} /></li>
+                                <li className='col-sm-3'><SocialIcon url="https://www.instagram.com/xxxxx/" target="_blank" size={10} /></li>
+                                <li className='col-sm-3'><SocialIcon url="https://www.linkedin.com/xxxxx/" target="_blank" size={10}/></li>
+                                <li className='col-sm-3'><SocialIcon url="https://wa.me/237xxxxxxx" target="_blank" size={10}/></li>
 
                             </ul>
                         </div>

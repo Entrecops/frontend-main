@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload} from '@fortawesome/free-solid-svg-icons';
 import {Notification, addNotification} from '../../globalComponent/Notifications';
 import axios from 'axios';
-import socketIOClient from "socket.io-client";
-import {rootUrl} from '../../../configs/config';
 
 import Hoc from '../../globalComponent/Hoc';
 import Header from '../../globalComponent/Header';
@@ -35,7 +33,6 @@ class Dashboard extends Component {
         reservationsAll: [],
         error: '',
         error2: '',
-        thresholdDays: 7 // Default threshold duration
     }
 
     handleChange = (date) => {
@@ -50,13 +47,6 @@ class Dashboard extends Component {
             profileImageValid: true,
             error: ''
         }, this.validateForm);
-    }
-
-    handleThresholdChange = (e) => {
-        const value = parseInt(e.target.value);
-        if (!isNaN(value)) {
-            this.setState({ thresholdDays: value });
-        }
     }
 
     closeEventModal = () => {
@@ -80,24 +70,6 @@ class Dashboard extends Component {
             this.fetchEvents()
             // get reservations
             this.retrieveReservation();
-
-            // Connecter à Socket.IO
-            this.socket = socketIOClient(rootUrl); // Assurez-vous que l'URL correspond à votre configuration serveur
-            this.socket.on('newReservation', (reservation) => {
-                // Afficher une notification
-                addNotification("success", "New service reservation received !", "New reservation have been made by a client for a service");
-            });
-            this.socket.on('newReservation1', (reservation) => {
-                // Afficher une notification
-                addNotification("success", "New Event reservation received !", "New reservation have been made by a client for an Event");
-            });
-        }
-    }
-
-    componentWillUnmount() {
-        // Déconnecter de Socket.IO pour éviter les fuites de mémoire
-        if (this.socket) {
-            this.socket.disconnect();
         }
     }
 
@@ -165,12 +137,8 @@ class Dashboard extends Component {
     }
 
     render() {
-        const { events, services, eventsLoading, servicesLoading, error, error2, reservations, thresholdDays } = this.state;
+        const { events, services, eventsLoading, servicesLoading, error, error2, reservations } = this.state;
         const {user} = this.props;
-        const currentDate = new Date();
-        const thresholdDate = new Date(currentDate);
-        thresholdDate.setDate(currentDate.getDate() - thresholdDays);
-
         return (
             <Hoc>
                 <Notification />
@@ -186,11 +154,7 @@ class Dashboard extends Component {
                             </div>
                             {/* Reservations (Tout) */}
                             <div className="col-sm-12 text-center mb-2">
-                                <div className="d-flex align-items-center">
-                                    <input type="text" placeholder="Rechercher une reservation" onChange={this.searchReservations}/><br/>
-                                    <h5 className="mb-0">Ancienneté: </h5>
-                                    <input type="number" id="thresholdDays" value={thresholdDays} onChange={this.handleThresholdChange} className="col-1 form-control ml-2 "/><h5 className="mb-0">Jours</h5>
-                                </div>
+                                <input type="text" placeholder="Rechercher une reservation" onChange={this.searchReservations}/>
                             </div>
                             <div className='col-12'>
                                 <table className="table table-bordered">
@@ -210,8 +174,7 @@ class Dashboard extends Component {
                                         {
                                             reservations.length > 0 ?
                                                 reservations.map((resa, i) => (
-                                                    <tr key={resa._id} style={{ backgroundColor: (new Date(resa.date) >= thresholdDate) ? "#FFFF00" : "#fff"}}>
-                                                    {/* ( resa.partnerViewed ) ? "#fff":"#FFB6C1" */}
+                                                    <tr key={resa._id} style={{ backgroundColor: ( resa.partnerViewed ) ? "#fff" : "#FFB6C1"}}>
                                                         <th scope="row">{i + 1}</th>
                                                         <td>{resa.name}</td>
                                                         <td>{resa.tel}</td>

@@ -4,7 +4,7 @@
     .container {
         background-color: white;
         padding: 6rem 5rem;
-        border-radius: 8px;
+        border-radius: 22px;
         border: solid 1px #eee;
 
         .noti-link {
@@ -33,6 +33,7 @@
                 width: 5rem;
                 height: 5rem;
                 margin-right: 1.5rem;
+                border-radius: 22px;
             }
         }
         .noti-link:not(:last-child) {
