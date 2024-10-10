@@ -18,52 +18,36 @@
             
             input, select {
                 width: 100% !important;
-                height: 3.5rem;
                 border: solid 1px rgba($maincolor, 0.4) !important;
-                border-radius: 10px !important;
+                border-radius: 2px !important;
                 background-color: white;
                 &::placeholder {
                     color: #666;
-                    font-size: 1.3rem;
+                    font-size: 1.25rem;
                 }
                 &:focus {
                     box-shadow: inset 0 -1px 0 rgba($maincolor, 0.4);
                     border-bottom: solid 1px $maincolor !important;
                 }
-                @media only screen and (max-width: 600px) {
-
-                    margin: 7px;
-                    width: 50% !important;
-                    float: left;
-                }
-
             }
             .react-datepicker-wrapper {
                 width: 100% !important;
             }
             label {
                 position: absolute;
-                top: -1.5rem;
+                top: -1.1rem;
                 color: $maincolor;
-                font-size: 1.3rem;
-                @media only screen and (max-width: 600px) {
-
-                    margin-top: 3px;
-                }
             }
             #cat {
-                top: -1.9rem !important;
+                top: -1.6rem !important;
             }
         }
     
         .button {
-            padding: 1.1rem 1.5rem !important;
-            height: 4.1rem;
-            border-radius: 50% !important;
+            padding: .7rem 1.5rem !important;
+            border-radius: 2px !important;
             @media only screen and (max-width: 600px) {
-                width: 50%;
-                border-radius: 20px !important;
-                margin-top: 3px;
+                width: 100%;
             }
     
             svg {

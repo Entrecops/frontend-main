@@ -6,7 +6,7 @@ import axios from 'axios';
 import socketIOClient from "socket.io-client";
 import {connect} from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faMapMarked, faSearch, faComment, faAnchor, faLocationArrow, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faMapMarked, faSearch, faComment, faAnchor } from '@fortawesome/free-solid-svg-icons';
 import './DetailsPage.scss';
 import {DateFormat} from "../../utils/DateFormat"
 // import AwesomeSlider from 'react-awesome-slider';
@@ -638,21 +638,18 @@ class DetailsPage extends Component {
                                             {
                                                 anounceType === "service" ?
                                                 <Hoc>
-                                                     <div className="otherinfos">
-                                                        <div className="d-flex flex-column">
-                                                            <h3>Offre</h3>
-                                                            <p>{announce.offre}</p>
-                                                            <button className="button mt-1 mb-3 book mx-4" onClick={() => this.setState({ showCouponModal: true })}>Télécharger la carte</button>
-                                                        </div>
-                                                    </div>
-
                                                     <div className="otherinfos">
                                                         <div className="d-flex flex-column">
                                                             <h3>Prix d'une reservation</h3>
                                                             <p>{announce.price} FCFA</p>
                                                         </div>
                                                     </div>
-                                                   
+                                                    <div className="otherinfos">
+                                                        <div className="d-flex flex-column">
+                                                            <h3>Offre</h3>
+                                                            <p>{announce.offre}</p>
+                                                        </div>
+                                                    </div>
                                                 </Hoc>:null
                                             }
 
@@ -715,25 +712,24 @@ class DetailsPage extends Component {
                                                         <FontAwesomeIcon icon={faMapMarked} size={"2x"} />
                                                         <h2>Lieu: {announce.place}</h2>
                                                     </div>
-                                                    <hr />
-                                                    <div className="d-flex py-2">
-                                                        <FontAwesomeIcon icon={faPhone} size={"2x"} />
-                                                        <h2>Contact: {announce.tel}</h2>
-                                                    </div>
                                                 </Hoc>:null
                                             }
                                             {
                                                 anounceType === "service" ?
                                                 <Hoc>
-                                                   
+                                                    <div className="d-flex py-2">
+                                                        <FontAwesomeIcon icon={faCalendar} size={"2x"} />
+                                                        <h2>Durée: {announce.duration}</h2>
+                                                    </div>
+                                                    <hr />
                                                     <div className="d-flex py-2">
                                                         <FontAwesomeIcon icon={faMapMarked} size={"2x"} />
                                                         <h2>Lieu: {announce.place}</h2>
                                                     </div>
                                                     <hr />
                                                     <div className="d-flex py-2">
-                                                        <FontAwesomeIcon icon={faPhone} size={"2x"} />
-                                                        <h2>Contact: {announce.tel}</h2>
+                                                        <FontAwesomeIcon icon={faAnchor} size={"2x"} />
+                                                        <h2>Cible: {announce.target}</h2>
                                                     </div>
                                                 </Hoc>:null
                                             }
@@ -751,16 +747,16 @@ class DetailsPage extends Component {
                                                 {announce.coupons ?
                                                     Number(announce.coupons.nCoupons) > 0 ?
                                                     <div className="d-flex flex-column alert alert-warning py-4 px-3">
-                                                        <h4 className="pb-3 text-center mt-3">{announce.coupons.nCoupons} Coupons Restants</h4>
-                                                        <h4 className="text-center" style={{ color: "#DC3545"}}>{announce.coupons.infos}.</h4><br/>
+                                                        <h3 className="pb-3 text-center mt-3">{announce.coupons.nCoupons} Coupons Restants</h3>
+                                                        <h3 className="text-center" style={{ color: "#DC3545"}}>{announce.coupons.infos}.</h3><br/>
                                                         <h4 className="text-center">Réduction de <strong>{announce.coupons.montant}%</strong>.</h4><br/>
                                                         <button className="button mt-1 mb-3 book mx-4" onClick={() => this.setState({ showCouponModal: true })}>Télécharger le Coupon</button>
                                                     </div>:
                                                     <div className="d-flex flex-column py-2">
-                                                        <h4 className="text-center">Pas de Coupons de réductions disponible pour cette annonce.</h4>
+                                                        <h3 className="text-center">Pas de Coupons de réductions disponible pour cette annonce.</h3>
                                                     </div>:
                                                     <div className="d-flex flex-column py-2">
-                                                        <h4 className="text-center">Pas de Coupons de réductions disponible pour cette annonce.</h4>
+                                                        <h3 className="text-center">Pas de Coupons de réductions disponible pour cette annonce.</h3>
                                                     </div>
                                                 }
                                             </div>
@@ -770,13 +766,13 @@ class DetailsPage extends Component {
                                                         {
                                                             announce.video&&announce.video.length ?
                                                                 <Hoc>
-                                                                    <h4 className="mb-3">Regardez l'aperçu en video</h4>
+                                                                    <h3 className="mb-3">Regardez l'aperçu en video</h3>
                                                                     <video src={rootUrl + '/' + announce.video} width="100%" height="100%" controls onClick={() => this.setState({ showVideo: true })}>
                                                                     </video>
                                                                 </Hoc> :
                                                                 announce.youtubeVideoLink&&announce.youtubeVideoLink.length ?
                                                                     <Hoc>
-                                                                        <h4 className="mb-3">Regardez l'aperçu en video</h4>
+                                                                        <h3 className="mb-3">Regardez l'aperçu en video</h3>
                                                                         <iframe width="100%" height="100%" title="Video de l'annonce"
                                                                             src={announce.youtubeVideoLink}
                                                                             onClick={() => this.setState({ showVideo: true })}>
@@ -788,11 +784,10 @@ class DetailsPage extends Component {
                                             </div>
                                             <div className="other-infos mt-4">
                                                 <div className="d-flex flex-column">
-                                                
-                                                <h4 className="mb-4"><FontAwesomeIcon icon={faLocationArrow}/>  Localisation</h4>
+                                                    <h3 className="mb-4">Localisation</h3>
                                                     {announce.mapLink && announce.mapLink.length ?
                                                     <Hoc>
-                                                        <h4><a href="#map" style={{ "cursor": "pointer" }} onClick={(e) => this.openMap(e, announce.mapLink)} >Lien Google Map</a></h4>
+                                                        <h2><a href="#map" style={{ "cursor": "pointer" }} onClick={(e) => this.openMap(e, announce.mapLink)} >Lien Google Map</a></h2>
                                                         <p>Cliquez sur le lien pour agrandir.</p>
                                                     </Hoc>:
                                                     <p>Pas de Localisation disponible</p>}

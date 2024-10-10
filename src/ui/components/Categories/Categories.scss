@@ -6,19 +6,13 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
-    .service-header {
-        font-size: 2.6rem;
-
-        @media only screen and (max-width: 900px){
-            font-size: 1.9rem;
-        }
-    }
+    
     .container {
         width: 100%;
         @media only screen and(max-width: 992px) {
             width: 95% !important;
             h2 {
-                font-size: 2.0rem;
+                font-size: 1.8rem;
             }
         }
         @media only screen and(min-width: 576px) {
@@ -45,7 +39,7 @@
         position: relative;
         background: #fff;
         box-shadow: 5px 5px 10px 0px rgba(46,61,73,0.15);
-        border-radius: 15px;
+        border-radius: 4px;
         transition: all 0.3s ease;
         width: 13rem;
 
@@ -72,7 +66,6 @@
         img {
             width: 4rem;
             height: 4rem;
-           
         }
 
     }
@@ -83,7 +76,6 @@
     .wrimagecard-topimage_header{
         padding: 20px;
         background-color:rgba($maincolor, 0.1);
-        border-radius: 15px 15px 0 0;
     }
     svg {
         @media only screen and(max-width: 600px) {
@@ -115,14 +107,14 @@
 
         p {
             text-align: center;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             @media only screen and(max-width: 600px) {
                 font-size: 1.25rem;
             }
         }
         .selected {
             color: $maincolor !important;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: bold;
             @media only screen and(max-width: 600px) {
                 font-size: 1.25rem;

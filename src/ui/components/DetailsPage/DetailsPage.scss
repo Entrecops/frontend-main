@@ -13,7 +13,6 @@
 #projectdetails .left {
     padding: 2rem;
     padding-left: 0 !important;
-    
 
     @media only screen and (max-width: 768px) {
         padding-left: 2rem !important;
@@ -24,7 +23,7 @@
     }
 
     textarea {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .aws-sld__controls__arrow-left:after, .aws-sld__controls__arrow-right:after {
@@ -56,7 +55,6 @@
 #projectdetails .left img{
     // height: 40rem;
     width: 100%;
-    border-radius: 20px 20px 0 0;
 
     @media only screen and (max-width: 900px) {
         // height: 25rem;
@@ -73,10 +71,6 @@
 #projectdetails .left .infos{
     background-color: white;
     border: solid 1px #eee;
-    border-radius: 22px;
-}
-#projectdetails .left .infos ImageGallery{
-    border-radius: 22px;
 }
 
 #projectdetails .left .otherinfos{
@@ -84,30 +78,6 @@
 
     p{
         font-size: 1.3rem;
-        text-align: justify;
-        text-overflow: ellipsis;
-    }
-    button{
-        width: 35%;
-        left: 30px;
-        margin-top: 1.8rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-    min-width: 13rem;
-    margin-left: auto;
-    box-shadow: 0 4px 10px #e2e2e2;
-    display: block;
-    border-radius: 22px;
-    @media only screen and (max-width: 767px) {
-        width: 100%;
-    }
-
-    svg {
-        margin-left: 1rem;
-        path {
-            color: white;
-        }
-    }
     }
 }
 #projectdetails .left .founds{
@@ -141,7 +111,7 @@
 #projectdetails .left h2{
     margin-top: 2.5rem;
     font-weight: 600;
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     color: $fontColor;
 }
 
@@ -178,36 +148,31 @@
     padding: 0 1.6rem;
     margin-top: 2.5rem;
 
-
     input {
-        font-size: 1.3rem;
-        border-radius: 10px;
-        height: 4rem;
+        font-size: 1.4rem;
     }
 
     textarea {
-        font-size: 1.3rem;
-        border-radius: 10px;
+        font-size: 1.4rem;
+        border-radius: 5px;
     }
 
     p {
-        font-size: 1.6rem;
+        font-size: 1.35rem;
     }
 }
 #projectdetails .left .reviews p {
     border-bottom: solid 1px #eee;
     padding-bottom: 1.5rem;
-    text-overflow: ellipsis;
 }
 #projectdetails .left .send-btn{
     margin-top: 1.8rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 600;
     min-width: 13rem;
     margin-left: auto;
     box-shadow: 0 4px 10px #e2e2e2;
     display: block;
-    border-radius: 22px;
     @media only screen and (max-width: 767px) {
         width: 100%;
     }
@@ -252,7 +217,6 @@
         padding: 4rem 2.5rem;
         background-color: white;
         border: solid 1px #eee;
-        border-radius: 22px;
         @media only screen and (max-width: 767px) {
             padding: 0 !important;
         }
@@ -280,7 +244,6 @@
         }
 
         .button {
-            border-radius: 22px;
             @media only screen and (max-width: 1000px) {
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -292,14 +255,12 @@
         padding: 4rem 2.5rem;
         background-color: white;
         border: solid 1px #eee;
-        border-radius: 22px;
         @media only screen and (max-width: 767px) {
             padding: 2rem 0 !important;
             border: none !important;
         }
 
         .button {
-            border-radius: 22px;
             @media only screen and (max-width: 1000px) {
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -333,18 +294,16 @@
 
 .modal-content {
     .modal-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     button {
-        border-radius: 22px;
-        font-size: 1.3rem !important;
+        font-size: 1.4rem !important;
         font-weight: 600;
     }
 
     input {
         width: 100% !important;
-        border-radius: 10px;
     }
 
     .search {
@@ -374,7 +333,7 @@
 
 // For coupons
 #couponstodownload {
-    font-size: 1.3rem;
+
 }
 
 .social-icons-container {

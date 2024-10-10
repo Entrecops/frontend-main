@@ -16,19 +16,15 @@
     .add-buttom-wrapper {
         button {
             margin-left: 1rem;
-            width: 10%;
-            height: 5%;
             @media only screen and (max-width: 1024px) {
                 padding-left: 1rem;
                 padding-right: 1rem;
                 font-size: 1.2rem;
-                border-radius: 10% 10% 10% 10%;
             }
             @media only screen and (max-width: 600px) {
                 margin-left: 0 !important;
                 margin-top: 1rem;
                 font-size: 1.2rem;
-                border-radius: 10% 10% 10% 10%;
             }
         }
         @media only screen and (max-width: 600px) {
@@ -40,12 +36,12 @@
         background-color: white;
         border: solid 1px #eee;
         box-shadow: 0px 5px 10px #eee;
-        border-radius: 1px;
+        border-radius: 3px;
     }
 
     .list-group {
         box-shadow: 0px 3px 13px#eee;
-        border-radius: 10px;
+        border-radius: 4px;
         a {
             font-size: 1.4rem;
             padding-top: 1.3rem;
@@ -67,7 +63,7 @@
     table {
         border: solid 1px #e2e2e2;
         box-shadow: 0px 3px 13px#eee;
-        border-radius: 1px;
+        border-radius: 4px;
 
         thead {
             padding: 8rem;
@@ -94,8 +90,6 @@
 
     .deleteWrapper {
         button {
-            width: 10%;
-            height: 5%;
             font-size: 1.4rem;
             box-shadow: 0px 5px 10px #eee;
             @media only screen and (max-width: 600px) {
