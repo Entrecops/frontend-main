@@ -188,7 +188,7 @@ class Dashboard extends Component {
                             <div className="col-sm-12 text-center mb-2">
                                 <div className="d-flex align-items-center">
                                     <input type="text" placeholder="Rechercher une reservation" onChange={this.searchReservations}/><br/>
-                                    <h5 className="mb-0">Ancienneté: </h5>
+                                    <h5 className="old mb-0">Ancienneté: </h5>
                                     <input type="number" id="thresholdDays" value={thresholdDays} onChange={this.handleThresholdChange} className="col-1 form-control ml-2 "/><h5 className="mb-0">Jours</h5>
                                 </div>
                             </div>
@@ -259,6 +259,7 @@ class Dashboard extends Component {
                                                         id={event._id} />
                                                 </a>
                                             ))
+                                            
                                         }
                                         </div>
                                     : <h5 className="">Vous n'avez aucune Actualité active</h5>

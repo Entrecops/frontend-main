@@ -13,23 +13,41 @@
             font-size: 1.5rem;
         }
     }
+    .old{
+        margin-left: 10px;
+    }
+    .btn{
+        border-radius: 25px; 
+        @media only screen and (max-width: 1024px) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-size: 1.3rem;
+        }
+        @media only screen and (max-width: 600px) {
+            margin-left: 0 !important;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+        }
+    }
     .add-buttom-wrapper {
         button {
             margin-left: 1rem;
+            border-radius: 25px;
             @media only screen and (max-width: 1024px) {
                 padding-left: 1rem;
                 padding-right: 1rem;
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
             @media only screen and (max-width: 600px) {
                 margin-left: 0 !important;
                 margin-top: 1rem;
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
         }
         @media only screen and (max-width: 600px) {
             flex-direction: column !important;
         }
+        
     }
 
     .container {
@@ -41,7 +59,7 @@
 
     .list-group {
         box-shadow: 0px 3px 13px#eee;
-        border-radius: 4px;
+        border-radius: 20px;
         a {
             font-size: 1.4rem;
             padding-top: 1.3rem;
@@ -59,26 +77,36 @@
             }
         }
     }
-
+    input{
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
     table {
         border: solid 1px #e2e2e2;
         box-shadow: 0px 3px 13px#eee;
-        border-radius: 4px;
+        border-radius: 20px !important;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        
 
         thead {
             padding: 8rem;
+            border-radius: 20px !important;
         }
         th {
             font-size: 1.35rem;
             padding-top: 1.33rem;
             padding-bottom: 1.33rem;
             text-align: center;
+           
         }
         td {
             font-size: 1.3rem;
             vertical-align: middle !important;
             @media only screen and (max-width: 600px) {
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
         }
         .date {
@@ -87,13 +115,19 @@
             }
         }
     }
-
+#searchbar{
+    margin-left: -18rem;
+    font-size: 1.3rem;
+}
+.row{
+    margin-bottom: 2rem;
+}
     .deleteWrapper {
         button {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             box-shadow: 0px 5px 10px #eee;
             @media only screen and (max-width: 600px) {
-                font-size: 1.15rem;
+                font-size: 1.3rem;
             }
             svg {
                 path {
@@ -109,5 +143,6 @@
 .create-form {
     input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
             width: 100% !important;
+            border-radius: 10px;
         }
 }
