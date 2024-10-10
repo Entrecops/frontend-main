@@ -133,7 +133,7 @@ class Header extends PureComponent {
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/admin/home">
                                             Admin Dashboard
-                                            <FontAwesomeIcon icon={faBell} size={"1x"} /><sup className="ml-1">{newReservationCount}</sup>
+                                            <FontAwesomeIcon icon={faBell} size={"1x"} className='ico'/><sup className="ml-1">{newReservationCount}</sup>
                                         </NavLink>
                                     </li>:null
                                 }
@@ -142,7 +142,7 @@ class Header extends PureComponent {
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/dashboard/reservations">
                                             Dashboard
-                                            <FontAwesomeIcon icon={faBell} size={"1x"} /><sup className="ml-1">{newReservationCount}</sup>
+                                            <FontAwesomeIcon icon={faBell} size={"1x"} className='ico'/><sup className="ml-1">{newReservationCount}</sup>
                                         </NavLink>
                                     </li>:null
                                 }

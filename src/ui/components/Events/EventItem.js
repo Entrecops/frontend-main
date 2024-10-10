@@ -15,7 +15,6 @@ const EventItem = (props) => {
                     <p>{description}</p>
                 </center>
             </div>
-            <button className="btn home__btn">Consulter</button>
         </a>
     );
 }
