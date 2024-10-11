@@ -87,16 +87,13 @@
         text-align: justify;
         text-overflow: ellipsis;
     }
-    button{
-        width: 35%;
-        left: 30px;
+    .btn{
+        width: 30%;
         margin-top: 1.8rem;
     font-size: 1.3rem;
     font-weight: 600;
     min-width: 13rem;
-    margin-left: auto;
     box-shadow: 0 4px 10px #e2e2e2; 
-    display: block;
     border-radius: 22px;
     @media only screen and (max-width: 767px) {
         width: 100%;

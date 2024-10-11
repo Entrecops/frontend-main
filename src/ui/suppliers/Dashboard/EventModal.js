@@ -466,15 +466,15 @@ class EventModal extends Component {
                                         loadingEv ? <div className="d-flex justify-content-center"><Loader /></div> :
                                         <Hoc>
                                           {error && error.length ? <div className="alert alert-danger" style={{ fontSize: "1.3rem" }}>{error}</div> : null}
-                                            <Modal.Title>Informations générales</Modal.Title>
+                                            <h2><Modal.Title>Informations générales</Modal.Title></h2>
                                             <br/>
 
-                                            <div className="form-group">
+                                            <div className="form-group tit">
                                                 <label for="name">Titre</label>
                                                     <input type="text" className={isTyping && !titleValid ? "form-control is-invalid" : "form-control"} value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Titre de l'évènement" required />
                                                     {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
                                             </div>
-                                            <div className="form-group">
+                                            <div className="form-group cate">
                                                 <label for="category">Catégorie</label>
                                                 <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className={isTyping && !categoryValid ? "form-control is-invalid" : "form-control"} >
                                                     <option>Choisir...</option>
@@ -487,7 +487,7 @@ class EventModal extends Component {
                                                 </select>
                                                     {isTyping && !categoryValid ? <div className="invalid-feedback">Sélectionnez une catégorie</div> : null}
                                             </div>
-                                            <div className="form-group">
+                                            <div className="form-group desc">
                                                 <label for="name">Description</label>
                                                 <textarea type="text" value={description} className={isTyping && !descriptionValid ? "form-control is-invalid" : "form-control"} onChange={(e) => this.handleInputChange(e)} name="description" rows={2} placeholder="Resumé"></textarea>
                                                 {isTyping && !descriptionValid ? <div className="invalid-feedback">Invalide</div> : null}

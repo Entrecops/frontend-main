@@ -26,6 +26,7 @@
             font-size: 1.8rem !important;
             padding-left: 2rem;
             padding-right: 2rem;
+            border-radius: 22px;
 
             @media only screen and (max-width: 900px) {
                 font-size: 1.4rem !important;
@@ -53,6 +54,7 @@
     .banner {
         img {
             width: 70%;
+            border-radius: 22px;
         }
         .supplierdemand {
             color: white !important;

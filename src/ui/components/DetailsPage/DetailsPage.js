@@ -642,7 +642,11 @@ class DetailsPage extends Component {
                                                         <div className="d-flex flex-column">
                                                             <h3>Offre</h3>
                                                             <p>{announce.offre}</p>
-                                                            <button className="button mt-1 mb-3 book mx-4" onClick={() => this.setState({ showCouponModal: true })}>Télécharger la carte</button>
+                                                            <div className="row">
+                                                                <div className="col text-center see-more">
+                                                                    <a href="/" className="btn btn-danger">Télécharger menu</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
 
