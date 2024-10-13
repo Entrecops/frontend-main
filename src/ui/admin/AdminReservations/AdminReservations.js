@@ -128,16 +128,18 @@ class AdminReservations extends Component {
                                     }
                                 </tbody>
                             </table>
-                            <h5>Pagination</h5>
-                            <ul className="pagination">
-                                {pageNumbers.map(number => (
-                                    <li key={number} className="page-item">
-                                        <button onClick={() => this.paginate(number)} className="mr-3 page-link">
-                                            {number}
-                                        </button>
-                                    </li>
-                                ))}
-                            </ul>
+                            <div className='pagi'>
+                                    <h5>Pagination</h5>
+                                    <ul className="pagination">
+                                        {pageNumbers.map(number => (
+                                            <li key={number} className="page-item">
+                                                <button onClick={() => this.paginate(number)} className="mr-3 page-link">
+                                                    {number}
+                                                </button>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    </div>
                         </div>
                     </div>
                 </div>

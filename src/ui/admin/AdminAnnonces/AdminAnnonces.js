@@ -201,6 +201,7 @@ class AdminAnnonce extends Component {
                                         }
                                         </tbody>
                                     </table> : null}
+                                    <div className='pagi'>
                                     <h5>Pagination</h5>
                                     <ul className="pagination">
                                         {pageNumbers.map(number => (
@@ -211,6 +212,7 @@ class AdminAnnonce extends Component {
                                             </li>
                                         ))}
                                     </ul>
+                                    </div>
                         </div>
                     </div>
                 </div>

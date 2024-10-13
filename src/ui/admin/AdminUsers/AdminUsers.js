@@ -182,6 +182,7 @@ class AdminUser extends Component {
                                         </tbody>
 
                                     </table>:null}
+                                    <div className='pagi'>
                                     <h5>Pagination</h5>
                                     <ul className="pagination">
                                         {pageNumbers.map(number => (
@@ -192,6 +193,7 @@ class AdminUser extends Component {
                                             </li>
                                         ))}
                                     </ul>
+                                    </div>
 
                         </div>
                         <button className="btn btn-danger btn-lg export-btn" onClick={() => this.exportUsersListCSV(users)}>Exporter la liste</button>

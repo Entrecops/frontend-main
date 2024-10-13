@@ -28,7 +28,8 @@ class Footer extends Component {
                                 <li><a href="/#">Confidentialité</a></li>
                                 <li><a href="/#">Termes & Conditions</a></li>
                             </ul>
-                        </div>                        <div className="col-sm-12 col-md-3">
+                        </div>                        
+                        <div className="col-sm-12 col-md-3">
                             <h4 className="text-white">Contact</h4>
                             <ul>
                                 <li>Entre Cops, Yaoundé Cameroun</li>
@@ -46,19 +47,19 @@ class Footer extends Component {
 
                             </ul>
                         </div>
-                        <div className="col-sm-12 col-md-3">
+                        <div className="col-sm-12 col-md-3 conten">
                             <h4 className="text-white">Paiement</h4>
                             <ul>
                                 <li>Paiment sécurisé avec:</li>
-                                <li className='col-sm-9'><img src={orange} className="img-fluid" alt="orange money" /></li>
-                                <li className='col-sm-9'><img src={mtn} className="img-fluid" alt="Mtn MOMO" /></li>
-                                <li className='col-sm-9'><img src={yup} className="img-fluid" alt="YUP" /></li>
+                                <li className='col-sm-9'>
+                                    <img src={orange} className="img-fluid" alt="orange money" />
+                                    <img src={mtn} className="img-fluid" alt="Mtn MOMO" />
+                                </li>
                             </ul>
                         </div>
                     </div>
                    <div className="row py-4 py-5">
                         <div className="col-sm-12">
-                            <hr />
                             <h5 className="text-center text-white mt-5">Copyright @2019. All rights Reserved.</h5>
                         </div>
                     </div>
