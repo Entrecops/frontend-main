@@ -252,8 +252,9 @@ class AdminSupplier extends Component {
 
                                         </tbody>
                                     </table>: null }
-                                    <h5>Pagination</h5>
-                                    <ul className="pagination">
+                                    <div className='pagi'>
+                                        <h5>Pagination</h5>
+                                        <ul className="pagination">
                                         {pageNumbers.map(number => (
                                             <li key={number} className="page-item">
                                                 <button onClick={() => this.paginate(number)} className="mr-3 page-link">
@@ -262,6 +263,7 @@ class AdminSupplier extends Component {
                                             </li>
                                         ))}
                                     </ul>
+                                    </div>
 
                         </div>
                         <button className="btn btn-danger btn-lg export-btn" onClick={() => this.exportSupplierListCSV(suppliers)}>Exporter la liste</button>

@@ -4,6 +4,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-radius: 10px;
         @media only screen and (max-width: 600px) {
             flex-direction: column !important;
         }
@@ -13,6 +14,7 @@
             padding: 3rem 4rem;
             width: 30%;
             border-bottom: solid 5px #101d2c;
+            border-radius: 10px;
             h2 {
                 font-size: 2.1rem;
                 @media only screen and (max-width: 600px) {
@@ -48,14 +50,14 @@
 .payments_historic {
     margin-top: 7rem !important;
     td,th {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 }
 
 .modalo {
     table {
         td, th {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             text-align: left;
         }
     }

@@ -23,7 +23,8 @@
     &:not(:first-child) {
         padding-top: 3rem;
         margin-top: 4.5rem;
-        border-top: solid 1px #eee;
+        border-top: solid 1px #eee; 
+        border-radius: 10px;
     }
 
     
@@ -53,6 +54,7 @@
     }
     button {
         font-size: 1.6rem;
+        border-radius: 22px;
         @media only screen and (max-width:900px) {
             font-size: 1.45rem;
         }

@@ -8,7 +8,7 @@
     .left-content {
         width: 15%;
         background-color: #343A40;
-        position: fixed;
+        position: sticky absolute;
         bottom: 0;
         top: 0;
         padding: 3rem;
@@ -57,19 +57,22 @@
         }
     }
 
-
+    .pagi{
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+    }
 
     .right-content {
         width: 85%;
-        margin-left: 15%;
         padding: 3rem;
         @media only screen and (max-width: 1600px) {
             width: 80%;
-            margin-left: 20%;
+            margin-left: auto;
         }
         @media only screen and (max-width: 1200px) {
             width: 75%;
-            margin-left: 25%;
+            margin-left: auto;
         }
         @media only screen and (max-width: 900px) {
             flex: 1;
@@ -84,7 +87,7 @@
             margin-left: 1rem;
             background-color: $fontColor;
             padding: .5rem 1.5rem;
-            border-radius: 20px;
+            border-radius: 10px;
             h4 {
                 margin-left: .5rem;
                 color: white !important;
@@ -101,19 +104,26 @@
         }
 
         .card {
+            border-radius: 20px;
             .card-body {
                 padding: 2rem 1.5rem;
+                
+                .card-text{
+                    border-radius: 20px;
+                }
                 h5 {
                     font-size: 1.5rem;
                     font-weight: 600;
                 }
                 p{
-                    font-size: 1.4rem;
+                    font-size: 1.3rem;
                 }
                 a {
                     font-size: 1.3rem;
                 }
                 .upload-btn {
+                    border-radius: 30px;
+                    font-size: 1.3rem;
                     svg {
                         path {fill: white;}
                     }
@@ -125,12 +135,19 @@
     .title {
         margin-bottom: 2rem;
     }
-
+    button{
+        border-radius: 20px;
+    }
     table {
         border: 1px solid #eee !important;
         background-color: white !important;
+        border-radius: 20px !important;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+       
         th {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 600;
             text-align: center !important;
             @media only screen and (max-width: 900px) {
@@ -166,13 +183,13 @@
         #category {
             height: 3rem;
             option {
-                font-size: 1.4rem !important;
+                font-size: 1.3rem !important;
             }
         }
 
     }
     .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-        font-size: 1.7rem !important;
+        font-size: 1.5rem !important;
         color: #333333 !important;
     }
     .nav-tabs .nav-link {
@@ -201,7 +218,7 @@
 .updload-section {
     .container {
         background-color: white;
-        border-radius: 8px;
+        border-radius: 20px;
 
         .upload {
             @media only screen and (max-width: 768px) {
@@ -274,6 +291,7 @@
     position: fixed;
     bottom: 40px;
     right: 40px;
+    border-radius: 20px;
 }
 
 .user-email-item {
@@ -292,7 +310,7 @@
 }
 
 input[type=text], input[type=email], input[type=password], input[type=tel], input[type=number] {
-    width: 100% !important;
+    width: 40% !important;
 }
 
 .DraftEditor-root{
@@ -309,6 +327,7 @@ input[type=text], input[type=email], input[type=password], input[type=tel], inpu
     right: 30px;
     bottom: 30px;
     font-size: 1.6rem;
+    border-radius: 20px;
 }
 
 .react-datepicker-wrapper {
