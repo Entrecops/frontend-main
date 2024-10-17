@@ -8,7 +8,7 @@ import yup from '../../assets/images/logoyup.png'
 class Footer extends Component {
     render() {
         return (
-            <footer className="bg-dark footer" style={{alignItems: 'center'}}>
+            <footer className="bg-dark footer">
                 <div className="container py-3">
                    <div className="row pt-5 pb-3">
                         <div className="col-sm-12 col-md-3">
@@ -35,17 +35,9 @@ class Footer extends Component {
                                 <li>Entre Cops, Yaoundé Cameroun</li>
                                 <li>Appelez-nous: 697395271</li>
                                 <li>Email: dtamamot@gmail.com</li>
-                                <li className="mt-5"><b>Suivez-nous sur:</b></li>
                             </ul>
 
-                            <ul className="row pt-1">
-
-                                <li className='col-sm-3'><SocialIcon url="https://www.facebook.com/Entre-Cops-101914647857273/" target="_blank" size={30} /></li>
-                                <li className='col-sm-3'><SocialIcon url="https://www.instagram.com/xxxxx/" target="_blank" size={30} /></li>
-                                <li className='col-sm-3'><SocialIcon url="https://www.linkedin.com/xxxxx/" target="_blank" size={30}/></li>
-                                <li className='col-sm-3'><SocialIcon url="https://wa.me/237xxxxxxx" target="_blank" size={30}/></li>
-
-                            </ul>
+                           
                         </div>
                         <div className="col-sm-12 col-md-3 conten">
                             <h4 className="text-white">Paiement</h4>
@@ -58,9 +50,19 @@ class Footer extends Component {
                             </ul>
                         </div>
                     </div>
-                   <div className="row py-4 py-5">
-                        <div className="col-sm-12">
-                            <h5 className="text-center text-white mt-5">Copyright @2019. All rights Reserved.</h5>
+                   <div className="row py-4">
+                   <div className="col-sm-12">
+                        <ul className="row pt-1">
+
+                            <li className='col-sm-1 social'><SocialIcon url="https://www.facebook.com/Entre-Cops-101914647857273/" target="_blank" size={5} /></li>
+                            <li className='col-sm-1 social'><SocialIcon url="https://www.instagram.com/xxxxx/" target="_blank" size={5} /></li>
+                            <li className='col-sm-1 social'><SocialIcon url="https://www.linkedin.com/xxxxx/" target="_blank" size={5}/></li>
+                            <li className='col-sm-1 social'><SocialIcon url="https://wa.me/237xxxxxxx" target="_blank" size={5}/></li>
+
+                        </ul>
+                        </div>
+                        <div className="text-center col-sm-12">
+                            <h5 className="text-white mt-5">Copyright @2019. All rights Reserved.</h5>
                         </div>
                     </div>
                 </div>

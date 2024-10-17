@@ -77,6 +77,7 @@ body{
 
   .btn {
     outline: none !important;
+    border-radius: 22px;
 
     &:focus, &:active {
       outline: none !important;
@@ -112,7 +113,7 @@ body{
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     -webkit-border-radius: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 10px;
     outline: none !important;
   }
   
