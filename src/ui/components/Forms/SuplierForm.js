@@ -245,13 +245,13 @@ class SupplierForm extends Component {
                         <textarea type="text" className={isTyping && !otherInfosValid ? "form-control is-invalid" : "form-control"} value={otherInfos} onChange={(e) => this.handleInputChange(e)} name="otherInfos" rows={3} placeholder="Autres informations"></textarea>
                         {isTyping && !otherInfosValid ? <div className="invalid-feedback">Invalide</div> : null}
                     </div>
-                    <div className="row align-items-center justify-content-center py-3">
-                        <div className="col-sm-8 col-md-8 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                    <div className="upload row align-items-center justify-content-center py-3">
+                        <div className="upload col-sm-8 col-md-8 col-lg-6 d-flex flex-column justify-content-center align-items-center">
                             <Upload type="image" oldUrl={profileImage} setFile={(name, file) => this.setFile(name, file)} name="profileImage" label={"Image de Profil"} />
                             {isTyping && !profileImageValid ? <p className="alert alert-danger">Image Requise</p>:null }
                         </div>
                     </div>
-                    <div className="d-flex justify-content-end">
+                    <div className="d-flex align-items-center justify-content-center">
                         <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Valider"}</button>
                     </div>
                 </form>
