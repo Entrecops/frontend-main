@@ -11,7 +11,7 @@ class SupplierRegistration extends Component {
             <Hoc>
                 <Notification/>
                 <Header />
-                <section className="supplier-view-page" style={{marginTop: "5rem"}}>
+                <section className="supplier-view-page" style={{marginTop: "2rem"}}>
                     <div className="container my-5">
                         <div className="row justify-content-center mt-5">
                             <div className="col-sm-11 col-md-10 col-lg-8 mb-5 supplier-registration-form">

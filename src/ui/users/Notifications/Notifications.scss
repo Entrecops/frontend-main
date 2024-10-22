@@ -5,7 +5,7 @@
     .container {
         background-color: white;
         padding: 6rem 5rem;
-        border-radius: 10px;
+        border-radius: 22px;
         border: solid 1px #eee;
 
         .noti-link {
@@ -13,6 +13,7 @@
             border: solid 1px rgb(230, 230, 230);
             text-decoration: none;
             align-items: center;
+            border-radius: 20px;
             
             h3{
                 font-weight: 600;
@@ -42,17 +43,22 @@
     width: 25rem;
     background-color: white;
     margin-right: 0 !important;
+    border-radius: 10px;
 
     .notvisited {
         background-color: #f5f8fa;
+        border-radius: 10px;
+        margin-right: 5px !important;
     }
     .rec-item {
         border-bottom: solid 1px #eee;
+        border-radius: 10px;
         padding: 1.3rem 2rem;
         cursor: pointer;
 
         &:hover {
             background-color: white;
+            border-radius: 10px;
         }
         
         h4 {
@@ -69,6 +75,7 @@
             color: $maincolor;
             font-size: 1rem;
             margin-bottom: 0 !important;
+            border-radius: 10px;
         }
     }
 }

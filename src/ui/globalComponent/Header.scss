@@ -122,11 +122,13 @@
     }
 
     .dropdown-menu {
+      border-radius: 10px;
+      left: -18rem;
       @media only screen and (max-width: 992px) {
-        left: -18rem !important;
+        right: 1rem !important;
       }
       @media only screen and (max-width: 550px) {
-          left: -23rem !important;
+          right: 2rem !important;
       }
     }
 

@@ -458,8 +458,9 @@ class EventModal extends Component {
                     <Modal.Title>Ajouter une nouvelle Actualité</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                <div className="wrapper">
                     <form className="create-form">
-                        <div className="container">
+
                             <div className="row">
                                 <div className="col-sm-12 pl-4 pr-4 mt-4 mb-3">
                                     {
@@ -468,15 +469,14 @@ class EventModal extends Component {
                                           {error && error.length ? <div className="alert alert-danger" style={{ fontSize: "1.3rem" }}>{error}</div> : null}
                                             <h2><Modal.Title>Informations générales</Modal.Title></h2>
                                             <br/>
+                                            <div className="row">
+                                                <div className="col-md-6 col-sm-12">
+                                                        <input type="text" className="fadeIn second" value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Titre de l'évènement" required />
+                                                        {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
 
-                                            <div className="form-group tit">
-                                                <label for="name">Titre</label>
-                                                    <input type="text" className={isTyping && !titleValid ? "form-control is-invalid" : "form-control"} value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Titre de l'évènement" required />
-                                                    {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
-                                            </div>
-                                            <div className="form-group cate">
-                                                <label for="category">Catégorie</label>
-                                                <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className={isTyping && !categoryValid ? "form-control is-invalid" : "form-control"} >
+                                                </div>
+                                                <div className="col-md-6 col-sm-12">
+                                                <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className="fadeIn second form-control" >
                                                     <option>Choisir...</option>
                                                     {
                                                         categories && categories.length ?
@@ -486,17 +486,17 @@ class EventModal extends Component {
                                                     }
                                                 </select>
                                                     {isTyping && !categoryValid ? <div className="invalid-feedback">Sélectionnez une catégorie</div> : null}
+
+                                                </div>
                                             </div>
-                                            <div className="form-group desc">
-                                                <label for="name">Description</label>
-                                                <textarea type="text" value={description} className={isTyping && !descriptionValid ? "form-control is-invalid" : "form-control"} onChange={(e) => this.handleInputChange(e)} name="description" rows={2} placeholder="Resumé"></textarea>
-                                                {isTyping && !descriptionValid ? <div className="invalid-feedback">Invalide</div> : null}
-                                            </div>
+
+                                            <textarea type="text" value={description} className="fadeIn second form-control" onChange={(e) => this.handleInputChange(e)} name="description" rows={2} placeholder="Resumé"></textarea>
+                                            {isTyping && !descriptionValid ? <div className="invalid-feedback">Invalide</div> : null}
+
                                             <div className="row justify-content-between">
                                                 <div className="col-sm-12 col-md-7 col-lg-7">
-                                                    <div className="form-group">
-                                                        <label for="name">Lieu</label>
-                                                            <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className={isTyping && !placeValid ? "form-control is-invalid" : "form-control"} name="place" placeholder="Lieu de l'évènement" required />
+
+                                                            <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className="fadeIn second" name="place" placeholder="Lieu de l'évènement" required />
                                                         {isTyping && !placeValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                         {
                                                                 placeSuggestions.length > 0 && (
@@ -509,35 +509,32 @@ class EventModal extends Component {
                                                                     </ul>
                                                                 )
                                                             }
-                                                    </div>
+
                                                 </div>
                                                 <div className="col-sm-12 col-md-5 col-lg-5">
-                                                    <div className="form-group mt-2">
-                                                        <label for="name">Date et Heure de l'évènement</label><br />
-                                                        <DatePicker showTimeSelect dateFormat="Pp" className="form-control" selected={date} onChange={date => this.pickDate(date)} />
-                                                    </div>
+
+                                                        <DatePicker showTimeSelect dateFormat="Pp" className="fadeIn second " selected={date} onChange={date => this.pickDate(date)} />
+
                                                 </div>
                                             </div>
-                                            <div className="form-group">
-                                                <label for="name">Nombre Maximal des Réservations</label>
-                                                <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className={isTyping && !maxReservationValid ? "form-control is-invalid" : "form-control"} name="maxReservation" placeholder="Nombre Max de réservations" required />
+                                            
+                                                <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="maxReservation" placeholder="Nombre Max de réservations" required />
                                                 {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
-                                            </div>
-                                            <div className="form-group">
-                                                <label for="name">Prix d'une réservation</label>
-                                                <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className={isTyping && !priceValid ? "form-control is-invalid" : "form-control"} name="price" placeholder="Prix d'une reservation" required />
-                                                {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
-                                            </div>
 
-                                            <div className="form-group">
+
+                                                <label for="name">Prix d'une réservation</label>
+                                                <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="price" placeholder="Prix d'une reservation" required />
+                                                {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
+
+
                                             <label for="tags">Tags <strong>(Sélectionnez un ou plusieurs)</strong></label>
-                                                    <select id="tags" name="tags" className="form-control" multiple onChange={(e) => this.addTag(e.target.value)}>
+                                                    <select id="tags" name="tags" className="fadeIn second form-control" multiple onChange={(e) => this.addTag(e.target.value)}>
                                                         {tags.map(tag => (
                                                             <option key={tag} value={tag}>{tag}</option>
                                                         ))}
                                                     </select>
                                                     {/* <input type="text" value={tags} onChange={(e) => this.handleInputChange(e)} className= "form-control" name="tags" placeholder="Tags: Exple fete, concert, boutique" /> */}
-                                                </div>
+
 
                                                 {/* Affichage des tags sélectionnés */}
                                                 <div className="selected-tags">
@@ -553,14 +550,12 @@ class EventModal extends Component {
                                              <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="place">Lien Facebook (facultatif)</label>
-                                                            <input type="text" value={facebookLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="facebookLink" placeholder="Lien Facebook" />
+                                                            <input type="text" value={facebookLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="facebookLink" placeholder="Lien Facebook" />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="name">Lien Instagram (facultatif)</label>
-                                                            <input type="text" value={instagramLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="instagramLink" placeholder="Lien Instagram" />
+                                                            <input type="text" value={instagramLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="instagramLink" placeholder="Lien Instagram" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -568,25 +563,21 @@ class EventModal extends Component {
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="place">Lien Twitter (facultatif)</label>
-                                                            <input type="text" value={twitterLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="twitterLink" placeholder="Lien Twitter" />
+                                                            <input type="text" value={twitterLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="twitterLink" placeholder="Lien Twitter" />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="name">Lien WhatsApp (facultatif)</label>
-                                                            <input type="text" value={whatsappLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="whatsappLink" placeholder="Numéro WhatsApp (2376xxx)" />
+                                                            <input type="text" value={whatsappLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="whatsappLink" placeholder="Numéro WhatsApp (2376xxx)" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             <div className="form-group">
-                                                <label for="tags">Lien Google Map</label>
-                                                <input type="text" value={mapLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="mapLink" placeholder="Lien Google Map" />
+                                                <input type="text" value={mapLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="mapLink" placeholder="Lien Google Map" />
                                             </div>
 
                                             <div className="form-group">
-                                                <label for="name">Autres informations</label>
-                                                <textarea type="text" className="form-control" value={otherInfos} onChange={(e) => this.handleInputChange(e)} name="otherInfos" rows={3} placeholder="Autres informations"></textarea>
+                                                <textarea type="text" className="fadeIn second" value={otherInfos} onChange={(e) => this.handleInputChange(e)} name="otherInfos" rows={3} placeholder="Autres informations"></textarea>
                                             </div>
                                             <div className="row align-items-start py-3">
                                                 <div className="col-sm-12 col-md-6 col-lg-6">
@@ -611,7 +602,7 @@ class EventModal extends Component {
                                                     <label for="name">Importer une vidéo</label><br />
                                                     <Upload type="video" oldUrl={eventVideo} setFile={(name, file) => this.setFile(name, file)} name="eventVideo" label={"Importer depuis votre ordinateur"} />
                                                     <span>Ou bien insérez le lien youtube.</span>
-                                                    <input type="text" value={youtubeVideoLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="youtubeVideoLink" placeholder="Lien youtube" />
+                                                    <input type="text" value={youtubeVideoLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="youtubeVideoLink" placeholder="Lien youtube" />
                                                     {
                                                         youtubeVideoLink&&youtubeVideoLink.length ?
                                                         <iframe width="100%" title="video"
@@ -632,10 +623,10 @@ class EventModal extends Component {
                                             </div>
                                             {
                                                 !isEditing ?
-                                                <div className="d-flex justify-content-end">
+                                                <div className="d-flex justify-content-center">
                                                     <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Ajouter l'Evenement"}</button>
                                                 </div>:
-                                                <div className="d-flex justify-content-end">
+                                                <div className="d-flex justify-content-center">
                                                     <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Enregistrer la modification"}</button>
                                                 </div>
                                             }
@@ -643,8 +634,9 @@ class EventModal extends Component {
                                     }
                                 </div>
                             </div>
-                        </div>
+
                     </form>
+                    </div>
                 </Modal.Body>
                 <Modal.Footer>
                     {

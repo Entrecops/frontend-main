@@ -454,17 +454,18 @@ class ServiceModal extends Component {
     render() {
         const { serviceVideo, serviceMenu, title, cible, youtubeVideoLink, facebookLink, instagramLink, twitterLink, whatsappLink,
             category, serviceImageValid, titleValid, cibleValid, categoryValid, offre, place, placeValid, placeSuggestions,
-            error, loading, isTyping, categories, validating, deleting, duration, offreValid, mapLink,
+            loading, isTyping, categories, validating, deleting, duration, offreValid, mapLink,
             maxReservation, maxReservationValid, priceValid, price, tags, selectedTags, tempPlace } = this.state;
-        const { show, closeModal, loadingAn, isEditing, service } = this.props;
+        const { show, closeModal, loadingAn, isEditing, service, error, loader } = this.props;
         return (
-            <Modal show={show} onHide={() => closeModal()} size="lg" >
+            <Modal show={show} onHide={() => closeModal()} size="lg">
                 <Modal.Header closeButton>
                     <Modal.Title>Ajouter un nouveau Service</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <form className="create-form">
-                        <div className="container">
+                <div className="wrapper">
+                    <form className="create-form pr-4 pl-4">
+
                             <div className="row">
                                 <div className="col-sm-12 pl-4 pr-4 mt-4 mb-3">
                                     {
@@ -473,50 +474,42 @@ class ServiceModal extends Component {
                                                 {error && error.length ? <div className="alert alert-danger" style={{ fontSize: "1.3rem" }}>{error}</div> : null}
                                                 <Modal.Title>Informations générales</Modal.Title>
                                                 <br/>
-
-                                                <div className="form-group">
-                                                    <label for="name">Nom du Service</label>
-                                                    <input type="text" className={isTyping && !titleValid ? "form-control is-invalid" : "form-control"} value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Nom du Service" required />
-                                                    {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                <div className="row">
+                                                    <div className="col-md-6 col-sm-12">
+                                                        <input type="text" value={title} onChange={(e) => this.handleInputChange(e)} id="title" className="fadeIn second" name="title" placeholder="Saisir le nom du Service" required/>
+                                                        {isTyping&&!titleValid ? <div style={{color: "red"}}>Invalide. Min 6 caratères</div>:null}
+                                                    </div>
+                                                    <div className="col-md-6 col-sm-12">
+                                                        <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className="fadeIn second form-control" >
+                                                            <option>Choisir...</option>
+                                                            {
+                                                                categories && categories.length ?
+                                                                    categories.map(category => (
+                                                                        <option key={category._id}>{category.name}</option>
+                                                                    )) : <option>Loading...</option>
+                                                            }
+                                                        </select>
+                                                        {isTyping && !categoryValid ? <div style={{color: "red"}}>selectionnez une catégorie</div>:null}
+                                                    </div>
                                                 </div>
-                                                <div className="form-group">
-                                                    <label for="category">Catégorie</label>
-                                                    <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className={isTyping && !categoryValid ? "form-control is-invalid" : "form-control"} >
-                                                        <option>Choisir...</option>
-                                                        {
-                                                            categories && categories.length ?
-                                                                categories.map(category => (
-                                                                    <option key={category._id}>{category.name}</option>
-                                                                )) : <option>Loading...</option>
-                                                        }
-                                                    </select>
-                                                    {isTyping && !categoryValid ? <div className="invalid-feedback">Sélectionnez une catégorie</div> : null}
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="name">Offre</label>
-                                                    <textarea type="text" value={offre} className={isTyping && !offreValid ? "form-control is-invalid" : "form-control"} onChange={(e) => this.handleInputChange(e)} name="offre" rows={2} placeholder="Offre"></textarea>
-                                                    {isTyping && !offreValid ? <div className="invalid-feedback">Invalide</div> : null}
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="name">Cible</label>
-                                                    <input type="text" value={cible} onChange={(e) => this.handleInputChange(e)} className={isTyping && !cibleValid ? "form-control is-invalid" : "form-control"} name="cible" placeholder="Cible" required />
-                                                    {isTyping && !cibleValid ? <div className="invalid-feedback">Invalide</div> : null}
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="name">Nombre Maximal de Réservations</label>
-                                                    <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className={isTyping && !maxReservationValid ? "form-control is-invalid" : "form-control"} name="maxReservation" placeholder="Nombre Max de réservations" required />
-                                                    {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
-                                                </div>
-                                                <div className="form-group">
-                                                    <label for="name">Prix d'une réservation</label>
-                                                    <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className={isTyping && !priceValid ? "form-control is-invalid" : "form-control"} name="price" placeholder="Prix d'une reservation" required />
-                                                    {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
-                                                </div>
+                                                    
+                                                    <textarea type="text" value={offre} onChange={(e) => this.handleInputChange(e)} id="offre" className="fadeIn second" name="offre" placeholder="Entrer la description de l'offre"/>
+                                                    {isTyping&&!offreValid ? <div style={{color: "red"}}>invalide.</div>:null}
+                                                    
+                                                    <div className="row">
+                                                        <div className="col-md-6 col-sm-12">
+                                                            <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="maxReservation" placeholder="Nombre Max de réservations" required />
+                                                            {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                        </div>
+                                                        <div className="col-md-6 col-sm-12">
+                                                            <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="price" placeholder="Prix d'une reservation" required />
+                                                            {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                        </div>
+                                                    </div>
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="place">Lieux & Adresse</label>
-                                                            <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className={isTyping && !placeValid ? "form-control is-invalid" : "form-control"} name="place" placeholder="Lieu & Adresse" required />
+                                                            <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className="fadeIn second" name="place" placeholder="Lieu & Adresse" required />
                                                             {isTyping && !placeValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                             {
                                                                 placeSuggestions.length > 0 && (
@@ -533,21 +526,18 @@ class ServiceModal extends Component {
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="name">Durée du service/ Dates d'ouverture</label>
-                                                            <input type="text" value={duration} onChange={(e) => this.handleInputChange(e)} className= "form-control" name="duration" placeholder="Exple: 2 Mois" required />
+                                                            <input type="text" value={duration} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="duration" placeholder="entrer la durée. exemple: 2 mois" required />
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div className="form-group">
-                                                    <label for="tags">Tags <strong>(Sélectionnez un ou plusieurs)</strong></label>
-                                                    <select id="tags" name="tags" className="form-control" multiple onChange={(e) => this.addTag(e.target.value)}>
+                                                    <select id="tags" name="tags" className="fadeIn second form-control" multiple onChange={(e) => this.addTag(e.target.value)}>
                                                         {tags.map(tag => (
-                                                            <option key={tag} value={tag}>{tag}</option>
+                                                            <option key={tag} value={tag} className='opt'>{tag}</option>
                                                         ))}
                                                     </select>
                                                     {/* <input type="text" value={tags} onChange={(e) => this.handleInputChange(e)} className= "form-control" name="tags" placeholder="Tags: Exple fete, concert, boutique" /> */}
-                                                </div>
+
 
                                                 {/* Affichage des tags sélectionnés */}
                                                 <div className="selected-tags">
@@ -563,14 +553,13 @@ class ServiceModal extends Component {
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="place">Lien Facebook (facultatif)</label>
-                                                            <input type="text" value={facebookLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="facebookLink" placeholder="Lien Facebook" />
+                                                            <input type="text" value={facebookLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="facebookLink" placeholder="Lien Facebook" />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="name">Lien Instagram (facultatif)</label>
-                                                            <input type="text" value={instagramLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="instagramLink" placeholder="Lien Instagram" />
+
+                                                            <input type="text" value={instagramLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="instagramLink" placeholder="Lien Instagram" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -578,22 +567,22 @@ class ServiceModal extends Component {
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="place">Lien Twitter (facultatif)</label>
-                                                            <input type="text" value={twitterLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="twitterLink" placeholder="Lien Twitter" />
+
+                                                            <input type="text" value={twitterLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="twitterLink" placeholder="Lien Twitter" />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="name">Lien WhatsApp (facultatif)</label>
-                                                            <input type="text" value={whatsappLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="whatsappLink" placeholder="Numéro WhatsApp (2376xxx)" />
+
+                                                            <input type="text" value={whatsappLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="whatsappLink" placeholder="Numéro WhatsApp (2376xxx)" />
                                                         </div>
                                                     </div>
                                                 </div>
 
 
                                                 <div className="form-group">
-                                                    <label for="tags">Lien Google Map (facultatif)</label>
-                                                    <input type="text" value={mapLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="mapLink" placeholder="Lien Google Map" />
+
+                                                    <input type="text" value={mapLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="mapLink" placeholder="Lien Google Map" />
                                                 </div>
 
                                                 <div className="row align-items-start py-3">
@@ -614,12 +603,13 @@ class ServiceModal extends Component {
                                                             }
                                                             {this.state.imageSizeError ? <div className="container"><div className="alert alert-danger">{this.state.imageSizeError}</div></div> : null}
                                                         </div>
+                                                        
                                                     </div>
                                                     <div className="col-sm-12 col-md-6 col-lg-6">
                                                         <label for="name">Importer une vidéo</label><br />
                                                         <Upload type="video" oldUrl={serviceVideo} setFile={(name, file) => this.setFile(name, file)} name="serviceVideo" label={"Importer depuis votre ordinateur"} />
                                                         <span>Ou alors insérez le lien youtube.</span>
-                                                        <input type="text" value={youtubeVideoLink} onChange={(e) => this.handleInputChange(e)} className="form-control" name="youtubeVideoLink" placeholder="Lien youtube" />
+                                                        <input type="text" value={youtubeVideoLink} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="youtubeVideoLink" placeholder="Lien youtube" />
                                                         {
                                                             youtubeVideoLink&&youtubeVideoLink.length ?
                                                                 <iframe width="100%" title="video"
@@ -634,10 +624,10 @@ class ServiceModal extends Component {
                                                 </div>
                                                 {
                                                 !isEditing ?
-                                                    <div className="d-flex justify-content-end">
+                                                    <div className="d-flex align-items-center justify-content-center">
                                                         <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Ajouter l'Evenement"}</button>
                                                     </div> :
-                                                    <div className="d-flex justify-content-end">
+                                                    <div className="d-flex align-items-center justify-content-center">
                                                         <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Enregistrer la modification"}</button>
                                                     </div>
                                                 }
@@ -645,8 +635,8 @@ class ServiceModal extends Component {
                                     }
                                 </div>
                             </div>
-                        </div>
                     </form>
+                    </div>
                 </Modal.Body>
                 <Modal.Footer>
                     {
