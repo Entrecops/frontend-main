@@ -202,49 +202,32 @@ class SupplierForm extends Component {
             servicesValid,
             otherInfosValid,
             profileImageValid,
-            error,
             loading,
             mapLink
         } = this.state;
+        const { error, loader } = this.props;
         return (
             <Hoc>
+                <div className="wrapper">
+                <div id="formContent">
                 {this.state.redirect ? this.props.closeTo ? <Redirect to={this.props.closeTo} />: null : null}
-                <form id="supplierForm">
+                <form id="supplierForm" className="pr-4 pl-4">
                     {error && error.length ? <div className="alert alert-danger" style={{fontSize: "1.3rem"}}>{error}</div> : null}
-                    <div className="form-group">
-                        <label for="name">Nom complet</label>
-                        <input type="text" className={isTyping && !nameValid ? "form-control is-invalid" : "form-control"} value={name} onChange={(e) => this.handleInputChange(e)} name="name" id="name" placeholder="Nom complet" />
-                        {isTyping && !nameValid ? <div className="invalid-feedback">Invalide</div> : null}
-                    </div>
-                    <div className="form-group">
-                        <label for="email">Adresse Email</label>
-                        <input type="email" className={isTyping && !emailValid ? "form-control is-invalid" : "form-control"} value={email} onChange={(e) => this.handleInputChange(e)} name="email" id="email" placeholder="Adresse Email" />
-                        {isTyping && !emailValid ? <div className="invalid-feedback">Email invalide</div> : null}
-                    </div>
-                    <div className="form-group">
-                        <label for="tel">Numero de Téléphone</label>
-                        <input type="tel" className={isTyping && !telValid ? "form-control is-invalid" : "form-control"} value={tel} onChange={(e) => this.handleInputChange(e)} name="tel" id="tel" pattern="[0-9]{9}" placeholder="Numero de Téléphone" />
-                        {isTyping && !telValid ? <div className="invalid-feedback">Invalide</div> : null}
-                    </div>
-                    <div className="form-group">
-                        <label for="name">Localisation</label>
-                        <input type="text" className={isTyping && !locationValid ? "form-control is-invalid" : "form-control"} value={location} onChange={(e) => this.handleInputChange(e)} name="location" id="location" placeholder="Localisation" />
-                        {isTyping && !locationValid ? <div className="invalid-feedback">Invalide</div> : null}
-                    </div>
-                    <div className="form-group">
-                        <label for="name">Lien Google Map</label>
-                        <input type="text" className="form-control" value={mapLink} onChange={(e) => this.handleInputChange(e)} name="mapLink" id="mapLink" placeholder="Lien Google Map" />
-                    </div>
-                    <div className="form-group">
-                        <label for="name">Vos services (Séparez par des virgules: ",")</label>
-                        <textarea type="text" className={isTyping && !servicesValid ? "form-control is-invalid" : "form-control"} value={services} onChange={(e) => this.handleInputChange(e)} name="services" rows={3} placeholder="Services"></textarea>
-                        {isTyping && !servicesValid ? <div className="invalid-feedback">Invalide</div> : null}
-                    </div>
-                    <div className="form-group">
-                        <label for="name">Autres informations</label>
-                        <textarea type="text" className={isTyping && !otherInfosValid ? "form-control is-invalid" : "form-control"} value={otherInfos} onChange={(e) => this.handleInputChange(e)} name="otherInfos" rows={3} placeholder="Autres informations"></textarea>
-                        {isTyping && !otherInfosValid ? <div className="invalid-feedback">Invalide</div> : null}
-                    </div>
+                    <input type="text" value={name} onChange={(e) => this.handleInputChange(e)} id="name" className="fadeIn second" name="name" placeholder="Nom complet"/>
+                    {isTyping&&!nameValid ? <div style={{color: "red"}}>Invalide. Min 6 caratères</div>:null}
+                    <input type="email" value={email} onChange={(e) => this.handleInputChange(e)} id="email" className="fadeIn second" name="email" placeholder="Adresse Email"/>
+                    {isTyping&&!emailValid ? <div style={{color: "red"}}>Email non valide.</div>:null}
+                    <input type="tel" value={tel} onChange={(e) => this.handleInputChange(e)} id="tel" className="fadeIn second" name="tel" placeholder="Numero de Téléphone"/>
+                    {isTyping&&!telValid ? <div style={{color: "red"}}>Tel non valide.</div>:null}
+                    <input type="text" value={location} onChange={(e) => this.handleInputChange(e)} id="location" className="fadeIn second" name="location" placeholder="Localisation"/>
+                    {isTyping&&!locationValid ? <div style={{color: "red"}}>invalide.</div>:null}
+                    <input type="text" value={mapLink} onChange={(e) => this.handleInputChange(e)} id="mapLink" className="fadeIn second" name="mapLink" placeholder="Inserer le lien Google Map"/>
+                    <input type="text" value={services} onChange={(e) => this.handleInputChange(e)} id="services" className="fadeIn second" name="services" placeholder="Vos services (Séparez par des Virgules : ',')"/>
+                    {isTyping&&!servicesValid ? <div style={{color: "red"}}>invalide.</div>:null}
+                    <textarea type="text" value={otherInfos} onChange={(e) => this.handleInputChange(e)} id="otherInfos" className="fadeIn second" name="otherInfos" placeholder="Autres informations"/>
+                    {isTyping&&!otherInfosValid ? <div style={{color: "red"}}>invalide.</div>:null}
+
+
                     <div className="upload row align-items-center justify-content-center py-3">
                         <div className="upload col-sm-8 col-md-8 col-lg-6 d-flex flex-column justify-content-center align-items-center">
                             <Upload type="image" oldUrl={profileImage} setFile={(name, file) => this.setFile(name, file)} name="profileImage" label={"Image de Profil"} />
@@ -255,6 +238,8 @@ class SupplierForm extends Component {
                         <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Valider"}</button>
                     </div>
                 </form>
+                </div>
+                </div>
             </Hoc>
         );
     }

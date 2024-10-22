@@ -4,7 +4,7 @@
     .container {
         background-color: white;
         padding: 6rem 5rem;
-        border-radius: 10px;
+        border-radius: 20px;
         border: solid 1px #eee;
 
         .noti-link {
@@ -13,6 +13,7 @@
             text-decoration: none;
             align-items: center;
             flex: 1;
+
 
             .flex-grow-1 {
                 @media only screen and (max-width: 600px) {
@@ -28,6 +29,7 @@
             &:hover {
                 background-color: #f5f8fa;
                 cursor: pointer;
+                border-radius: 10px 10px 0 0;
             }
             img {
                 width: 5rem;
@@ -49,6 +51,7 @@
         .active {
             color: black !important;
             font-weight: bold;
+            border-radius: 10px 10px 0 0;
         }
     }
     .noti-link-wrapper {
