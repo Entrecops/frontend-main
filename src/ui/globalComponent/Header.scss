@@ -28,6 +28,7 @@
     }
 
     .dropdown-mobile {
+      font-size: 2rem;
       @media only screen and (min-width: 991px) {
         display: none;
       }
@@ -123,18 +124,24 @@
 
     .dropdown-menu {
       border-radius: 10px;
-      left: -18rem;
+      left: -10rem ;
+
       @media only screen and (max-width: 992px) {
         right: 1rem !important;
+        min-width: 25rem;
       }
       @media only screen and (max-width: 550px) {
           right: 2rem !important;
+          min-width: 25rem;
       }
     }
 
     #notifications-link {
       font-size: 1.3rem !important;
-      padding-left: 2.1rem;
+      padding-left: 2.3rem;
+      @media only screen and (max-width:550px) {
+        padding-left: auto;
+      }
     }
 }
 

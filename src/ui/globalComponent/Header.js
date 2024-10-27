@@ -100,9 +100,11 @@ class Header extends PureComponent {
                         {
                             token ?
                             <div className="dropdown-mobile mt-2">
+                                 {token && role !== "admin"?
                                 <a href="/recommandations" className=""  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <FontAwesomeIcon icon={faBookmark} size={"1x"} /><sup className="ml-1">{user.recommandations && user.recommandations.length ? user.recommandations.length:0}</sup>
-                                </a>
+                                </a>:null}
+
                                     {user.recommandations && user.recommandations.length ?
                                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <Notifications recommandations={user.recommandations.reverse()} />

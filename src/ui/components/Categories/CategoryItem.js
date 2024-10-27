@@ -27,8 +27,8 @@ const CategoryItem = (props) => {
                     <center>
                         {(category.name === "Coupons") && <img src={imgCoupons} alt="" />}
                         {(category.name === "Sortir") && <img src={imgSortir} alt="" />}
-                        {(category.name === "Bar lounge & Restaurants") && <img src={imgSante} alt="" />}
                         {(category.name === "Beauté & Santé") && <img src={imgSante} alt="" />}
+                        {(category.name === "Bar & lounge") && <img src={imgBar} alt="" />}
                         {(category.name === "Voyages") && <img src={imgVoyage} alt="" />}
                         {(category.name === "Shopping") && <img src={imgShopping} alt="" />}
                         {(category.name === "Made in 237") && <img src={madein} alt="" />}
