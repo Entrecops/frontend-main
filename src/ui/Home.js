@@ -19,7 +19,7 @@ class Home extends Component {
                     <Caroussel />
                     <Filter />
                     <Categories />
-                    <Events eventType="Actualités" isHomePage={true} displayFilter={false} />
+                    <Events eventType="Evenements" isHomePage={true} displayFilter={false} />
                     <Services eventType="Services" isHomePage={true} displayFilter={false} />
                     <SupplierBaner />
                 </Suspense>

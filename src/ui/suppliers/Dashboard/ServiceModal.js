@@ -476,10 +476,12 @@ class ServiceModal extends Component {
                                                 <br/>
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
+                                                        <label className="fadeIn second" htmlFor="title">Titre *</label>
                                                         <input type="text" value={title} onChange={(e) => this.handleInputChange(e)} id="title" className="fadeIn second" name="title" placeholder="Saisir le nom du Service" required/>
                                                         {isTyping&&!titleValid ? <div style={{color: "red"}}>Invalide. Min 6 caratères</div>:null}
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
+                                                        <label className="fadeIn second" htmlFor="category">Categorie *</label>
                                                         <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className="fadeIn second form-control" >
                                                             <option>Choisir...</option>
                                                             {
@@ -492,16 +494,18 @@ class ServiceModal extends Component {
                                                         {isTyping && !categoryValid ? <div style={{color: "red"}}>selectionnez une catégorie</div>:null}
                                                     </div>
                                                 </div>
-                                                    
+                                                    <label className="fadeIn second" htmlFor="offre">Description *</label>
                                                     <textarea type="text" value={offre} onChange={(e) => this.handleInputChange(e)} id="offre" className="fadeIn second" name="offre" placeholder="Entrer la description de l'offre"/>
                                                     {isTyping&&!offreValid ? <div style={{color: "red"}}>invalide.</div>:null}
                                                     
                                                     <div className="row">
                                                         <div className="col-md-6 col-sm-12">
+                                                            <label className="fadeIn second" htmlFor="maxReservation">Nombre Max de Reservations *</label>
                                                             <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="maxReservation" placeholder="Nombre Max de réservations" required />
                                                             {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                         </div>
                                                         <div className="col-md-6 col-sm-12">
+                                                            <label className="fadeIn second" htmlFor="price">Prix *</label>
                                                             <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="price" placeholder="Prix d'une reservation" required />
                                                             {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                         </div>
@@ -509,6 +513,7 @@ class ServiceModal extends Component {
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
+                                                            <label className="fadeIn second" htmlFor="place">Lieu & Adresse *</label>
                                                             <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className="fadeIn second" name="place" placeholder="Lieu & Adresse" required />
                                                             {isTyping && !placeValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                             {
@@ -526,6 +531,7 @@ class ServiceModal extends Component {
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
+                                                            <label className="fadeIn second" htmlFor="duration">Durée *</label>
                                                             <input type="text" value={duration} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="duration" placeholder="entrer la durée. exemple: 2 mois" required />
                                                         </div>
                                                     </div>

@@ -159,11 +159,11 @@ class AdminAnnonce extends Component {
                 <div className="container">
                     <div className="row mt-5">
                         <div className="col-sm-12 d-flex justify-content-between align-items-center mb-2">
-                            <h3 className="title">TOUTES LES ACTUALITES</h3>
-                            <button onClick={() => this.setState({showCreationModal: true})} className="button">Ajouter une Actualité</button>
+                            <h3 className="title">TOUTES LES EVENEMENTS</h3>
+                            <button onClick={() => this.setState({showCreationModal: true})} className="button">Ajouter un évènement</button>
                         </div>
                         <div className="col-sm-12 text-center mb-2">
-                            <input type="text" placeholder="Rechercher une actualité" id="searchbar" onChange={this.searchEvent}/>
+                            <input type="text" placeholder="Rechercher un évènement" id="searchbar" onChange={this.searchEvent}/>
                         </div>
                         <div className="col-sm-12 text-center">
                             {error && error.length ? <div className="alert alert-danger" style={{ fontSize: "1.3rem" }}>{error}</div> : null}

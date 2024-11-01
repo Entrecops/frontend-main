@@ -70,7 +70,7 @@ class Events extends Component {
                                             </div>
                                         )): null
                             }
-                            {!loading&&events.length === 0 &&!error.length ? <div className="d-block ml-auto mr-auto justify-content-center"><h5>Aucune Actualité</h5></div>:null}
+                            {!loading&&events.length === 0 &&!error.length ? <div className="d-block ml-auto mr-auto justify-content-center"><h5>Aucun Evènement</h5></div>:null}
                         </div>
                         {
                             this.props.isHomePage&&events.length !==0 ?

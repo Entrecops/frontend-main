@@ -255,11 +255,11 @@ class AdminCoupons extends Component {
                             {error.length ? <div className="alert alert-danger" style={{ fontSize: "1.3rem" }}>{error}</div> : null}
                         </div>
                         <div className="col-sm-12 text-center mb-2">
-                            <input type="text" placeholder="Filtrer actualité et services" id="searchbar" onChange={this.searchServicesAndActu}/>
+                            <input type="text" placeholder="Filtrer évènements et services" id="searchbar" onChange={this.searchServicesAndActu}/>
                         </div>
                         <div className="col-sm-12">
                             <Tabs defaultActiveKey="events" id="uncontrolled-tab-example">
-                                <Tab eventKey="events" title="Actualités">
+                                <Tab eventKey="events" title="évènements">
                                     {
                                         eventsLoading ? <div className="d-block mr-auto ml-auto text-center mt-5"><Loader /></div> :
                                             events && events.length ?

@@ -306,7 +306,7 @@ class AdminSlider extends Component {
                                         <div className="row justify-content-center py-3">
                                             <div className="col-sm-12 col-md-12 mb-2">
                                                 <div className="custom-file">
-                                                    <input type="text" onChange={(e) => this.makeSearch(e.target.value)} placeholder="Rechercher une actualité ou un évènement" />
+                                                    <input type="text" onChange={(e) => this.makeSearch(e.target.value)} placeholder="Rechercher un service ou un évènement" />
                                                 </div>
                                             </div>
                                         </div>

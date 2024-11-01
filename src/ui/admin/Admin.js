@@ -88,6 +88,7 @@ class Admin extends Component {
                 {this.state.redirect ? <Redirect to="/" /> : null}
                 <section className="admin">
                     <div className="main-container">
+                        
                         <div className="left-content d-flex flex-column">
                             <div className="logoWrapper">
                                 <a href="/"><img src={logo} width="110" height="50" alt="LOGO" /></a>
@@ -97,7 +98,7 @@ class Admin extends Component {
                                     <h3 className="d-inline align-middle">ACCUEIL</h3>
                                 </NavLink>
                                 <NavLink className="navbar-brand" to="/admin/annonces">
-                                    <h3 className="d-inline align-middle">ACTUALITES</h3>
+                                    <h3 className="d-inline align-middle">EVENEMENTS</h3>
                                 </NavLink>
                                 <NavLink className="navbar-brand" to="/admin/services">
                                     <h3 className="d-inline align-middle">SERVICES</h3>
