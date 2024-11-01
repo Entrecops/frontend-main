@@ -259,7 +259,7 @@ class EventModal extends Component {
                             if (this.props.refreshEventList) {
                                 this.props.refreshEventList();
                             }
-                            this.props.addNotification("success", "Actualité!", "Actualité crée avec succès. En attente de validation");
+                            this.props.addNotification("success", "Evènement!", "Evènement créé avec succès. En attente de validation");
                             this.props.closeModal();
                         })
                         .catch(err => {
@@ -455,7 +455,7 @@ class EventModal extends Component {
         return (
             <Modal show={show} onHide={() => closeModal()} size="lg" >
                 <Modal.Header closeButton>
-                    <Modal.Title>Ajouter une nouvelle Actualité</Modal.Title>
+                    <Modal.Title>Ajouter un nouvel évènement</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                 <div className="wrapper">
@@ -471,11 +471,13 @@ class EventModal extends Component {
                                             <br/>
                                             <div className="row">
                                                 <div className="col-md-6 col-sm-12">
+                                                        <label className="fadeIn second" htmlFor="title">Titre *</label>
                                                         <input type="text" className="fadeIn second" value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Titre de l'évènement" required />
                                                         {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
 
                                                 </div>
                                                 <div className="col-md-6 col-sm-12">
+                                                    <label className="fadeIn second" htmlFor="category">Categorie *</label>
                                                 <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className="fadeIn second form-control" >
                                                     <option>Choisir...</option>
                                                     {
@@ -489,13 +491,13 @@ class EventModal extends Component {
 
                                                 </div>
                                             </div>
-
+                                            <label className="fadeIn second" htmlFor="description">Description *</label>
                                             <textarea type="text" value={description} className="fadeIn second form-control" onChange={(e) => this.handleInputChange(e)} name="description" rows={2} placeholder="Resumé"></textarea>
                                             {isTyping && !descriptionValid ? <div className="invalid-feedback">Invalide</div> : null}
 
                                             <div className="row justify-content-between">
                                                 <div className="col-sm-12 col-md-7 col-lg-7">
-
+                                                            <label className="fadeIn second" htmlFor="place">Lieu *</label>
                                                             <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className="fadeIn second" name="place" placeholder="Lieu de l'évènement" required />
                                                         {isTyping && !placeValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                         {
@@ -512,22 +514,23 @@ class EventModal extends Component {
 
                                                 </div>
                                                 <div className="col-sm-12 col-md-5 col-lg-5">
-
-                                                        <DatePicker showTimeSelect dateFormat="Pp" className="fadeIn second " selected={date} onChange={date => this.pickDate(date)} />
+                                                        <label className="fadeIn second" htmlFor="date">Date *</label>
+                                                        <DatePicker showTimeSelect dateFormat="Pp" className="fadeIn second dater" selected={date} onChange={date => this.pickDate(date)} />
 
                                                 </div>
                                             </div>
-                                            
+
+                                                <label for="name">Nombre de places *</label>
                                                 <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="maxReservation" placeholder="Nombre Max de réservations" required />
                                                 {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
 
 
-                                                <label for="name">Prix d'une réservation</label>
+                                                <label for="name">Prix d'une réservation *</label>
                                                 <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className="fadeIn second" name="price" placeholder="Prix d'une reservation" required />
                                                 {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
 
 
-                                            <label for="tags">Tags <strong>(Sélectionnez un ou plusieurs)</strong></label>
+                                            <label for="tags">Tags * <strong>(Sélectionnez un ou plusieurs)</strong></label>
                                                     <select id="tags" name="tags" className="fadeIn second form-control" multiple onChange={(e) => this.addTag(e.target.value)}>
                                                         {tags.map(tag => (
                                                             <option key={tag} value={tag}>{tag}</option>
@@ -642,7 +645,7 @@ class EventModal extends Component {
                     {
                         isEditing ?
                         <Hoc>
-                            {!this.state.validated ? <Button disabled={validating} variant="dark" className="mr-3" onClick={() => this.validateEvent(event)}>{validating ? <Loader color="white" /> : "Valider l'actualité"}</Button>: null}
+                            {!this.state.validated ? <Button disabled={validating} variant="dark" className="mr-3" onClick={() => this.validateEvent(event)}>{validating ? <Loader color="white" /> : "Valider l'évènement"}</Button>: null}
                             <Button variant="danger" disabled={deleting} className="mr-3" onClick={() => this.deleteEvent(event)}>{deleting ? <Loader color="white" /> : "Supprimer"}</Button>
                         </Hoc>:null
                     }

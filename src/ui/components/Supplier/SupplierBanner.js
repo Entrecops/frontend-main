@@ -15,7 +15,7 @@ class Home extends Component {
                             </div>
                             <div className="col-sm-12 col-md-6 d-md-center">
                                 <h2><b>Vous avez des services ou</b> </h2>
-                                <h2><b>des actualités à communiquer ?</b></h2>
+                                <h2><b>des évènements à communiquer ?</b></h2>
                                 <a className="btn btn-outline-light btn-lg mt-5 supplierdemand" href="/supplier">Devenez un Partenaire Maintenant</a>
                             </div>
                         </div>
