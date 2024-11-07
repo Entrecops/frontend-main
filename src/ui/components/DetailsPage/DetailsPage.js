@@ -504,12 +504,6 @@ class DetailsPage extends Component {
                                                         <h2>{announce.title}</h2>
                                                         <h5 className="py-2">{announce.category}</h5>
                                                     </div>
-                                                    <div className="moreinfos d-none d-md-block d-flex justify-content-between mt-3">
-                                                        <Stars
-                                                            rate={announce.rate ? announce.rate: null }
-                                                            anounceType={anounceType}
-                                                            id={this.props.match.params.id} />
-                                                    </div>
                                                 </div>
                                                 <hr/>
                                             </div>
@@ -566,14 +560,14 @@ class DetailsPage extends Component {
                                                             <button className="button mt-1 mb-3 book" onClick={() => this.setState({ showCouponModal: true })}>Télécharger le Coupon</button>
                                                         </div> :
                                                             <div className="d-flex flex-column py-2">
-                                                                <h3 className="text-center">Pas de Coupons de réductions disponible pour cette annonce.</h3>
+                                                                <h3 className="text-center"></h3>
                                                             </div> :
                                                         <div className="d-flex flex-column py-2">
-                                                            <h3 className="text-center">Pas de Coupons de réductions disponible pour cette annonce.</h3>
+                                                            <h3 className="text-center"></h3>
                                                         </div>
                                                     }
                                                 </div>
-                                                <div className="moreinfos d-flex justify-content-between mb-3">
+                                                <div className="moreinfos d-flex justify-content-center mb-3">
                                                     <div className="headers d-flex align-items-center py-4">
                                                         <FontAwesomeIcon icon={faComment} size={"2x"} />
                                                         <h3 className="ml-3 mb-0">Reviews des clients</h3>
@@ -601,16 +595,16 @@ class DetailsPage extends Component {
                                                                         onClick={() => this.setState({ showVideo: true })}>
                                                                     </iframe>
                                                                 </Hoc> :
-                                                                <h3 className="mb-3 text-center"><FontAwesomeIcon icon={faVideoSlash} size={"1x"} /> Aucune vidéo disponible.</h3>
+                                                                <h3 className="mb-3 text-center"></h3>
                                                         }
                                                     </div>
-                                                    <div className="d-flex flex-column">
+                                                    <div className="d-flex flex-column justify-content-center">
                                                         <br/>
                                                         {announce.mapLink && announce.mapLink.length ?
                                                             <Hoc>
                                                                 <h4><a href="#map" style={{ "cursor": "pointer" }} onClick={(e) => this.openMap(e, announce.mapLink)} ><FontAwesomeIcon icon={faLocationArrow}/> Google Map</a></h4>
                                                             </Hoc> :
-                                                            <p><FontAwesomeIcon icon={faLocationArrow}/> Pas de Localisation disponible</p>}
+                                                            <p><FontAwesomeIcon icon={faLocationArrow}/></p>}
                                                     </div>
                                                 </div>
                                             </div>
@@ -760,10 +754,10 @@ class DetailsPage extends Component {
                                                         <button className="button mt-1 mb-3 book mx-4" onClick={() => this.setState({ showCouponModal: true })}>Télécharger le Coupon</button>
                                                     </div>:
                                                     <div className="d-flex flex-column py-2">
-                                                        <h4 className="text-center">Pas de Coupons de réductions disponible pour cette annonce.</h4>
+                                                        <h4 className="text-center"></h4>
                                                     </div>:
                                                     <div className="d-flex flex-column py-2">
-                                                        <h4 className="text-center">Pas de Coupons de réductions disponible pour cette annonce.</h4>
+                                                        <h4 className="text-center"></h4>
                                                     </div>
                                                 }
                                             </div>
@@ -785,17 +779,17 @@ class DetailsPage extends Component {
                                                                             onClick={() => this.setState({ showVideo: true })}>
                                                                         </iframe>
                                                                     </Hoc> :
-                                                                <h3 className="mb-3 text-center"> <FontAwesomeIcon icon={faVideoSlash} size={"1x"} /> Aucune vidéo disponible.</h3>
+                                                                <h3 className="mb-3 text-center"> </h3>
                                                         }
                                                 </div>
                                             </div>
                                             <div className="other-infos mt-4">
-                                                <div className="d-flex flex-column">
+                                                <div className="d-flex flex-column ">
                                                     {announce.mapLink && announce.mapLink.length ?
                                                     <Hoc>
-                                                        <h4><a href="#map" style={{ "cursor": "pointer" }} onClick={(e) => this.openMap(e, announce.mapLink)} ><FontAwesomeIcon icon={faLocationArrow}/> Google Map</a></h4>
+                                                        <h4 className="mb-3 text-center"><a href="#map" style={{ "cursor": "pointer" }} onClick={(e) => this.openMap(e, announce.mapLink)} ><FontAwesomeIcon icon={faLocationArrow}/> Google Map</a></h4>
                                                     </Hoc>:
-                                                    <p>Pas de Localisation disponible</p>}
+                                                    <p className="mb-3 text-center"></p>}
                                                 </div>
                                             </div>
                                             <div className="other-infos mt-4">
