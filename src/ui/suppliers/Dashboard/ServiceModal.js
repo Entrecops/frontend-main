@@ -476,14 +476,14 @@ class ServiceModal extends Component {
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="name">Nom du Service</label>
+                                                            <label for="name">Nom du Service*</label>
                                                             <input type="text" className={isTyping && !titleValid ? "form-control is-invalid" : "form-control"} value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Nom du Service" required />
                                                             {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="category">Catégorie</label>
+                                                            <label for="category">Catégorie*</label>
                                                             <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className={isTyping && !categoryValid ? "form-control is-invalid" : "form-control"} >
                                                                 <option>Choisir...</option>
                                                                 {
@@ -500,19 +500,19 @@ class ServiceModal extends Component {
 
                                                 
                                                 <div className="form-group">
-                                                    <label for="name">Offre</label>
+                                                    <label for="name">Offre*</label>
                                                     <textarea type="text" value={offre} className={isTyping && !offreValid ? "form-control is-invalid" : "form-control"} onChange={(e) => this.handleInputChange(e)} name="offre" rows={2} placeholder="Offre"></textarea>
                                                     {isTyping && !offreValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                 </div>
                                                 <div className="form-group">
-                                                            <label for="name">Cible</label>
+                                                            <label for="name">Cible*</label>
                                                             <input type="text" value={cible} onChange={(e) => this.handleInputChange(e)} className={isTyping && !cibleValid ? "form-control" : "form-control"} name="cible" placeholder="Cible" required/>
                                                             {isTyping && !cibleValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                 </div>
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                     <div className="form-group">
-                                                    <label for="name">Nombre Maximal de Réservations</label>
+                                                    <label for="name">Nombre Maximal de Réservations*</label>
                                                     <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className={isTyping && !maxReservationValid ? "form-control is-invalid" : "form-control"} name="maxReservation" placeholder="Nombre Max de réservations" required />
                                                     {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                 </div>
@@ -520,7 +520,7 @@ class ServiceModal extends Component {
 
                                                     <div className="col-md-6 col-sm-12">
                                                     <div className="form-group">
-                                                    <label for="name">Prix d'une réservation</label>
+                                                    <label for="name">Prix d'une réservation*</label>
                                                     <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className={isTyping && !priceValid ? "form-control is-invalid" : "form-control"} name="price" placeholder="Prix d'une reservation" required />
                                                     {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                 </div>
@@ -531,7 +531,7 @@ class ServiceModal extends Component {
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="place">Lieux & Adresse</label>
+                                                            <label for="place">Lieux & Adresse*</label>
                                                             <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className={isTyping && !placeValid ? "form-control is-invalid" : "form-control"} name="place" placeholder="Lieu & Adresse" required />
                                                             {isTyping && !placeValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                             {
@@ -549,14 +549,14 @@ class ServiceModal extends Component {
                                                     </div>
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="name">Durée du service/ Dates d'ouverture</label>
+                                                            <label for="name">Durée du service/ Dates d'ouverture*</label>
                                                             <input type="text" value={duration} onChange={(e) => this.handleInputChange(e)} className= "form-control" name="duration" placeholder="Exple: 2 Mois" required />
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <label for="tags">Tags <strong>(Sélectionnez un ou plusieurs)</strong></label>
+                                                    <label for="tags">Tags <strong>(Sélectionnez un ou plusieurs)</strong>*</label>
                                                     <select id="tags" name="tags" className="form-control" multiple onChange={(e) => this.addTag(e.target.value)}>
                                                         {tags.map(tag => (
                                                             <option key={tag} value={tag}>{tag}</option>
@@ -614,7 +614,7 @@ class ServiceModal extends Component {
 
                                                 <div className="row align-items-start py-3">
                                                     <div className="col-sm-12 col-md-6 col-lg-6">
-                                                        <label for="name">Importer des images</label><br />
+                                                        <label for="name">Importer des images*</label><br />
                                                         <div className="custom-file">
                                                             <input onChange={(e) => this.preview(e)} type="file" className="custom-file-input" accept="image/*" id="customFile" multiple />
                                                             <label className="custom-file-label" for="customFile">Choisir les images</label>
