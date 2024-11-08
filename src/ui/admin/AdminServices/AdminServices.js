@@ -3,7 +3,7 @@ import axios from 'axios';
 import Modal from 'react-bootstrap/Modal';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload} from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEye, faPencilAlt} from '@fortawesome/free-solid-svg-icons';
 import ServiceModal from '../../suppliers/Dashboard/ServiceModal';
 import Loader from '../../globalComponent/Loader';
 import Hoc from '../../globalComponent/Hoc';
@@ -174,7 +174,7 @@ class AdminService extends Component {
                                                 <th>#</th>
                                                 <th>Titre</th>
                                                 <th>Lieu</th>
-                                                <th>Cible</th>
+                                                <th>Réseaux Sociaux</th>
                                                 <th>Durée</th>
                                                 <th>Etat</th>
                                                 <th>Actions</th>
@@ -191,8 +191,8 @@ class AdminService extends Component {
                                                         <td>{service.duration}</td>
                                                         <td>{service.validated ? <span style={{ color: "green" }}>Validé</span> : <b style={{ color: "red" }}>En attente</b>}</td>
                                                         <td className="actions">
-                                                            <button onClick={() => this.getSingleEvent(service._id, "detail")} className="btn btn-outline-dark btn-md ml-3">Afficher</button>
-                                                            <button onClick={() => this.getSingleEvent(service._id, "reservations")} className="btn btn-dark btn-md ml-3">Voir les réservations</button>
+                                                            <a onClick={() => this.getSingleEvent(service._id, "detail")}><FontAwesomeIcon icon={faPencilAlt} /></a>
+                                                            <a onClick={() => this.getSingleEvent(service._id, "reservations")}> <FontAwesomeIcon icon={faEye} /></a>
                                                         </td>
                                                     </tr>
                                                 ))

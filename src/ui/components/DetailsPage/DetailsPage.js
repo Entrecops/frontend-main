@@ -6,7 +6,7 @@ import axios from 'axios';
 import socketIOClient from "socket.io-client";
 import {connect} from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faMapMarked, faSearch, faComment, faAnchor, faLocationArrow, faPhone, faCameraRetro, faVideo, faVideoSlash } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faMapMarked, faSearch, faComment, faAnchor, faLocationArrow, faPhone, faVideo } from '@fortawesome/free-solid-svg-icons';
 import './DetailsPage.scss';
 import {DateFormat} from "../../utils/DateFormat"
 // import AwesomeSlider from 'react-awesome-slider';
@@ -579,6 +579,30 @@ class DetailsPage extends Component {
                                                         id={this.props.match.params.id} />
                                                 </div>
                                                 <div className="other-infos mt-4">
+                                                <div className="d-flex flex-column">
+                                                    <h3 className="mb-4">Réseaux sociaux</h3>
+                                                        {announce.facebookLink && announce.facebookLink.length ||
+                                                        announce.instagramLink && announce.instagramLink.length ||
+                                                        announce.twitterLink && announce.twitterLink.length ||
+                                                        announce.whatsappLink && announce.whatsappLink.length ?
+                                                    <Hoc>
+                                                        <div className='row pt-4'>
+                                                            <div className='social-icons-container'>
+                                                                {announce.facebookLink && announce.facebookLink.length &&
+                                                                <SocialIcon url={announce.facebookLink} target="_blank"/>}
+                                                                {announce.instagramLink && announce.instagramLink.length &&
+                                                                <SocialIcon url={announce.instagramLink} target="_blank"/>}
+                                                                {announce.twitterLink && announce.twitterLink.length &&
+                                                                <SocialIcon url={announce.twitterLink} target="_blank"/>}
+                                                                {announce.whatsappLink && announce.whatsappLink.length &&
+                                                                <SocialIcon url={`https://wa.me/${announce.whatsappLink}`} target="_blank"/>}
+                                                            </div>
+                                                        </div>
+                                                    </Hoc>:
+                                                    <p></p>}
+                                                </div>
+                                            </div>
+                                                <div className="other-infos mt-4">
                                                     <div className="d-flex flex-column">
                                                         {
                                                             announce.video&&announce.video.length ?
@@ -813,7 +837,7 @@ class DetailsPage extends Component {
                                                             </div>
                                                         </div>
                                                     </Hoc>:
-                                                    <p>Pas de reseaux sociaux disponible.</p>}
+                                                    <p></p>}
                                                 </div>
                                             </div>
                                         </div>
