@@ -26,7 +26,7 @@ class ServiceModal extends Component {
         twitterLink: '',
         offre: '',
         duration: '',
-        tags: ['Fete', 'Concert', 'Shopping', 'Cinema', 'Brunch', 'Grillade', 'Restaurant', 'SnackBar'],
+        tags: ['Appartements', 'Bar-Lounge', 'Barbecue', 'Beauté', 'Boire', 'Cabaret', 'Coiffure', 'Concert', 'Danser', 'Grillade', 'Gym', 'Haman', 'Karaoké', 'Lodge', 'Manger', 'Manicure', 'Maquillage', 'Musique', 'Oldschool', 'Pédicure', 'Piscine', 'Randonnée', 'Sauna', 'Sport', 'Sushi', 'Tourisme'],
         place: '',
         mapLink: '',
         maxReservation: '',
@@ -452,7 +452,7 @@ class ServiceModal extends Component {
     }
 
     render() {
-        const { serviceVideo, serviceMenu, title, cible, youtubeVideoLink, facebookLink, instagramLink, twitterLink, whatsappLink,
+        const { serviceVideo, serviceMenu, title, nameValid, cible, youtubeVideoLink, facebookLink, instagramLink, twitterLink, whatsappLink,
             category, serviceImageValid, titleValid, cibleValid, categoryValid, offre, place, placeValid, placeSuggestions,
             error, loading, isTyping, categories, validating, deleting, duration, offreValid, mapLink,
             maxReservation, maxReservationValid, priceValid, price, tags, selectedTags, tempPlace } = this.state;
@@ -507,7 +507,7 @@ class ServiceModal extends Component {
                                                         <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className={isTyping && !maxReservationValid ? "form-control is-invalid" : "form-control"} name="maxReservation" placeholder="Nombre Max de réservations" required />
                                                         {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                     </div>
-                                                    
+
                                                     <div className="form-group col-md-6 col-sm-12">
                                                         <label for="name">Prix d'une réservation *</label>
                                                         <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className={isTyping && !priceValid ? "form-control is-invalid" : "form-control"} name="price" placeholder="Prix d'une reservation" required />

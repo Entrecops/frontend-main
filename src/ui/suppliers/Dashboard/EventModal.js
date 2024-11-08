@@ -48,7 +48,7 @@ class EventModal extends Component {
         validated: false,
         validating: false,
         deleting: false,
-        tags: ['Fete', 'Concert', 'Shopping', 'Cinema', 'Brunch', 'Grillade', 'Restaurant', 'SnackBar'],
+        tags: ['Appartements', 'Bar-Lounge', 'Barbecue', 'Beauté', 'Boire', 'Cabaret', 'Coiffure', 'Concert', 'Danser', 'Grillade', 'Gym', 'Haman', 'Karaoké', 'Lodge', 'Manger', 'Manicure', 'Maquillage', 'Musique', 'Oldschool', 'Pédicure', 'Piscine', 'Randonnée', 'Sauna', 'Sport', 'Sushi', 'Tourisme'],
         selectedTags: [],
         tempPlace: '',
         placeSuggestions: []

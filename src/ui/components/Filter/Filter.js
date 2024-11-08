@@ -73,14 +73,34 @@ class Filter extends Component {
                         <label className="mb-4 d-block" id="cat">Tag</label>
                             <select name="tag" id="tag" onChange={(e) => this.handleChange(e)} defaultValue={tag} className="form-control form-control-lg">
                                 <option defaultValue>Choisir le tag</option>
-                                <option>Fete</option>
+                                <option>Appartements</option>
+                                <option>Bar-lounge</option>
+                                <option>Barbecue</option>
+                                <option>Beaute</option>
+                                <option>Boire</option>
+                                <option>Cabaret</option>
+                                <option>Cinéma</option>
+                                <option>Coiffure</option>
                                 <option>Concert</option>
-                                <option>Shopping</option>
-                                <option>Cinema</option>
-                                <option>Brunch</option>
+                                <option>Danser</option>
                                 <option>Grillade</option>
-                                <option>Restaurant</option>
-                                <option>SnackBar</option>
+                                <option>Gym</option>
+                                <option>Haman</option>
+                                <option>Karaoké</option>
+                                <option>Lodge</option>
+                                <option>Loger</option>
+                                <option>Manger</option>
+                                <option>Mannicure</option>
+                                <option>Maquillage</option>
+                                <option>Musique</option>
+                                <option>Oldschool</option>
+                                <option>Pédicure</option>
+                                <option>Piscine</option>
+                                <option>Randonnée</option>
+                                <option>Sauna</option>
+                                <option>Sport</option>
+                                <option>Sushi</option>
+                                <option>Tourisme</option>
                             </select>
                             {/* <label>Tag</label>
                             <input type="text" onChange={(e) => this.handleChange(e)} name="tag" className="form-control" value={tag} id="tag" placeholder="Entrez un tag" /> */}

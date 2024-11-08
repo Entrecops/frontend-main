@@ -19,6 +19,7 @@ class Services extends Component {
             axios.get('/api/service/4')
             .then(res => {
                 this.setState({ loading: false, services: res.data.services, error: '' })
+                console.log("*************Test services",this.state.services)
             })
             .catch(err => {
                 this.setState({ loading: false, error: 'Une erreur s\'est produite. Veuillez recharger la page' })

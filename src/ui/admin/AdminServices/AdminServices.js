@@ -135,6 +135,10 @@ class AdminService extends Component {
         this.setState({ currentPage: pageNumber });
     };
 
+    handleClick = () => {
+        window.location.reload();
+    };
+
     searchServices = ( e ) => {
         const filterParam = e.target.value;
         this.setState({ services: this.state.servicesAll.filter( ev => ev.title.toLowerCase().includes(filterParam.toLowerCase()) )});
@@ -158,7 +162,7 @@ class AdminService extends Component {
                     <div className="row mt-5">
                         <div className="col-sm-12 text-center d-flex justify-content-between align-items-center mb-5">
                             <h3 className="title">TOUS LES SERVICES</h3>
-                            <button onClick={() => this.setState({ showCreationModal: true })} className="button">Ajouter un service</button>
+                            <button onClick={() => this.setState({ showCreationModal: true }) } className="button">Ajouter un service</button>
                         </div>
                         <div className="col-sm-12 text-center mb-2">
                             <input type="text" placeholder="Rechercher un service" id="searchbar" onChange={this.searchServices}/>

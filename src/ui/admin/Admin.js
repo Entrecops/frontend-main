@@ -88,7 +88,7 @@ class Admin extends Component {
                 {this.state.redirect ? <Redirect to="/" /> : null}
                 <section className="admin">
                     <div className="main-container">
-                        
+
                         <div className="left-content d-flex flex-column">
                             <div className="logoWrapper">
                                 <a href="/"><img src={logo} width="110" height="50" alt="LOGO" /></a>
