@@ -51,7 +51,7 @@ class CouponList extends Component {
             <Fragment>
                 {
                     loadingEvents ? <div className="d-flex justify-content-center py-5"><Loader /></div> :
-                        <Events showMore={false} category={"Coupons"}  events={events} isCategoryPage={true} displayFilter={false} eventType="Evènements" isHomePage={false} /> 
+                        <Events showMore={false} category={"Coupons"}  events={events} isCategoryPage={true} displayFilter={false} eventType="Actualités" isHomePage={false} /> 
                 }
                 {
                     loadingServices ? <div className="d-flex justify-content-center py-5"><Loader /></div> :

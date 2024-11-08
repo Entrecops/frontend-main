@@ -205,7 +205,7 @@ class AdminPayments extends Component {
                                                 <td>joedoe@gmail.com</td>
                                             </tr>
                                             <tr key={"event._id"}>
-                                                <th scope="row">Evènement associé</th>
+                                                <th scope="row">Actualité associé</th>
                                                 <td>Restaurant Bastos</td>
                                             </tr>
                                             <tr key={"event._id"}>

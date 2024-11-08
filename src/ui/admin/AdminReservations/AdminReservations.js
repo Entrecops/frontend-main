@@ -116,7 +116,7 @@ class AdminReservations extends Component {
                                         <th>Client</th>
                                         <th>Téléphone</th>
                                         <th>Montant</th>
-                                        <th>Service/Evenement</th>
+                                        <th>Service/Actualité</th>
                                         <th>Date</th>
                                         <th>Paiement</th>
                                         <th>Date Paiement</th>

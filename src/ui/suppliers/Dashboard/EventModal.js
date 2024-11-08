@@ -638,7 +638,7 @@ class EventModal extends Component {
                                             {
                                                 !isEditing ?
                                                 <div className="d-flex justify-content-end">
-                                                    <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Ajouter l'Evenement"}</button>
+                                                    <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Ajouter l'Actualité"}</button>
                                                 </div>:
                                                 <div className="d-flex justify-content-end">
                                                     <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Enregistrer la modification"}</button>
