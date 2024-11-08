@@ -26,7 +26,7 @@ class ServiceModal extends Component {
         twitterLink: '',
         offre: '',
         duration: '',
-        tags: ['Appartements', 'Bar-Lounge', 'Barbecue', 'Beauté', 'Boire', 'Cabaret', 'Coiffure', 'Concert', 'Danser', 'Grillade', 'Gym', 'Haman', 'Karaoké', 'Lodge', 'Manger', 'Manicure', 'Maquillage', 'Musique', 'Oldschool', 'Pédicure', 'Piscine', 'Randonnée', 'Sauna', 'Sport', 'Sushi', 'Tourisme'],
+        tags: ['Fete', 'Concert', 'Shopping', 'Cinema', 'Brunch', 'Grillade', 'Restaurant', 'SnackBar'],
         place: '',
         mapLink: '',
         maxReservation: '',
@@ -452,7 +452,7 @@ class ServiceModal extends Component {
     }
 
     render() {
-        const { serviceVideo, serviceMenu, title, nameValid, cible, youtubeVideoLink, facebookLink, instagramLink, twitterLink, whatsappLink,
+        const { serviceVideo, serviceMenu, title, cible, youtubeVideoLink, facebookLink, instagramLink, twitterLink, whatsappLink,
             category, serviceImageValid, titleValid, cibleValid, categoryValid, offre, place, placeValid, placeSuggestions,
             error, loading, isTyping, categories, validating, deleting, duration, offreValid, mapLink,
             maxReservation, maxReservationValid, priceValid, price, tags, selectedTags, tempPlace } = this.state;
@@ -474,51 +474,64 @@ class ServiceModal extends Component {
                                                 <Modal.Title>Informations générales</Modal.Title>
                                                 <br/>
                                                 <div className="row">
-                                                    <div className="form-group col-md-6 col-sm-12">
-                                                        <label for="name">Nom du Service *</label>
-                                                        <input type="text" className={isTyping && !titleValid ? "form-control is-invalid" : "form-control"} value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Nom du Service" required />
-                                                        {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                    <div className="col-md-6 col-sm-12">
+                                                        <div className="form-group">
+                                                            <label for="name">Nom du Service</label>
+                                                            <input type="text" className={isTyping && !titleValid ? "form-control is-invalid" : "form-control"} value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Nom du Service" required />
+                                                            {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                        </div>
                                                     </div>
-                                                    <div className="form-group col-md-6 col-sm-12">
-                                                        <label for="category">Catégorie *</label>
-                                                        <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className={isTyping && !categoryValid ? "form-control is-invalid" : "form-control"} >
-                                                            <option>Choisir...</option>
-                                                            {
-                                                                categories && categories.length ?
-                                                                    categories.map(category => (
-                                                                        <option key={category._id}>{category.name}</option>
-                                                                    )) : <option>Loading...</option>
-                                                            }
-                                                        </select>
-                                                        {isTyping && !categoryValid ? <div className="invalid-feedback">Sélectionnez une catégorie</div> : null}
+                                                    <div className="col-md-6 col-sm-12">
+                                                        <div className="form-group">
+                                                            <label for="category">Catégorie</label>
+                                                            <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className={isTyping && !categoryValid ? "form-control is-invalid" : "form-control"} >
+                                                                <option>Choisir...</option>
+                                                                {
+                                                                    categories && categories.length ?
+                                                                        categories.map(category => (
+                                                                            <option key={category._id}>{category.name}</option>
+                                                                        )) : <option>Loading...</option>
+                                                                }
+                                                            </select>
+                                                            {isTyping && !categoryValid ? <div className="invalid-feedback">Sélectionnez une catégorie</div> : null}
+                                                        </div>
                                                     </div>
-
                                                 </div>
 
+                                                
                                                 <div className="form-group">
-                                                    <label for="name">Offre *</label>
+                                                    <label for="name">Offre</label>
                                                     <textarea type="text" value={offre} className={isTyping && !offreValid ? "form-control is-invalid" : "form-control"} onChange={(e) => this.handleInputChange(e)} name="offre" rows={2} placeholder="Offre"></textarea>
                                                     {isTyping && !offreValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                 </div>
-
+                                                <div className="form-group">
+                                                            <label for="name">Cible</label>
+                                                            <input type="text" value={cible} onChange={(e) => this.handleInputChange(e)} className={isTyping && !cibleValid ? "form-control" : "form-control"} name="cible" placeholder="Cible" required/>
+                                                            {isTyping && !cibleValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                </div>
                                                 <div className="row">
-                                                    <div className="form-group col-md-6 col-sm-12">
-                                                        <label for="name">Nombre Maximal de Réservations *</label>
-                                                        <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className={isTyping && !maxReservationValid ? "form-control is-invalid" : "form-control"} name="maxReservation" placeholder="Nombre Max de réservations" required />
-                                                        {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                    <div className="col-md-6 col-sm-12">
+                                                    <div className="form-group">
+                                                    <label for="name">Nombre Maximal de Réservations</label>
+                                                    <input type="number" value={maxReservation} onChange={(e) => this.handleInputChange(e)} className={isTyping && !maxReservationValid ? "form-control is-invalid" : "form-control"} name="maxReservation" placeholder="Nombre Max de réservations" required />
+                                                    {isTyping && !maxReservationValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                </div>
                                                     </div>
 
-                                                    <div className="form-group col-md-6 col-sm-12">
-                                                        <label for="name">Prix d'une réservation *</label>
-                                                        <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className={isTyping && !priceValid ? "form-control is-invalid" : "form-control"} name="price" placeholder="Prix d'une reservation" required />
-                                                        {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                    <div className="col-md-6 col-sm-12">
+                                                    <div className="form-group">
+                                                    <label for="name">Prix d'une réservation</label>
+                                                    <input type="number" value={price} onChange={(e) => this.handleInputChange(e)} className={isTyping && !priceValid ? "form-control is-invalid" : "form-control"} name="price" placeholder="Prix d'une reservation" required />
+                                                    {isTyping && !priceValid ? <div className="invalid-feedback">Invalide</div> : null}
+                                                </div>
                                                     </div>
+
                                                 </div>
 
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="place">Lieux & Adresse*</label>
+                                                            <label for="place">Lieux & Adresse</label>
                                                             <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className={isTyping && !placeValid ? "form-control is-invalid" : "form-control"} name="place" placeholder="Lieu & Adresse" required />
                                                             {isTyping && !placeValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                             {
@@ -637,10 +650,10 @@ class ServiceModal extends Component {
                                                 </div>
                                                 {
                                                 !isEditing ?
-                                                    <div className="d-flex justify-content-end">
+                                                    <div className="d-flex justify-content-center">
                                                         <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Ajouter l'Evenement"}</button>
                                                     </div> :
-                                                    <div className="d-flex justify-content-end">
+                                                    <div className="d-flex justify-content-center">
                                                         <button disabled={loading} type="submit" onClick={(e) => this.handleSubmit(e)} className="button fourth mt-4 mb-5">{loading ? <Loader color="white" /> : "Enregistrer la modification"}</button>
                                                     </div>
                                                 }
