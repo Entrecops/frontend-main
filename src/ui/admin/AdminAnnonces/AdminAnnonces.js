@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import {DateFormat} from '../../utils/DateFormat'
 import Loader from '../../globalComponent/Loader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload} from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEye, faPencilAlt} from '@fortawesome/free-solid-svg-icons';
 import EventModal from '../../suppliers/Dashboard/EventModal';
 import Hoc from '../../globalComponent/Hoc';
 import { Notification, addNotification } from '../../globalComponent/Notifications'
@@ -193,8 +193,8 @@ class AdminAnnonce extends Component {
                                                     <td>{event.category}</td>
                                                     <td>{event.validated ? <span style={{ color: "green" }}>Validé</span> : <b style={{ color: "red" }}>En attente</b>}</td>
                                                     <td className="actions">
-                                                        <button onClick={() => this.getSingleEvent(event._id, "detail")} className="btn btn-outline-dark btn-md ml-3">Afficher</button>
-                                                        <button onClick={() => this.getSingleEvent(event._id, "reservations")} className="btn btn-dark btn-md ml-3">Voir les réservations</button>
+                                                        <a onClick={() => this.getSingleEvent(event._id, "detail")} ><FontAwesomeIcon icon={faPencilAlt}/></a>
+                                                        <a onClick={() => this.getSingleEvent(event._id, "reservations")} ><FontAwesomeIcon icon={faEye} /></a>
                                                     </td>
                                                 </tr>
                                             ))
