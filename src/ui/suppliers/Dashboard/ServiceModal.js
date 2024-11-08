@@ -475,12 +475,12 @@ class ServiceModal extends Component {
                                                 <br/>
                                                 <div className="row">
                                                     <div className="form-group col-md-6 col-sm-12">
-                                                        <label for="name">Nom du Service*</label>
+                                                        <label for="name">Nom du Service *</label>
                                                         <input type="text" className={isTyping && !titleValid ? "form-control is-invalid" : "form-control"} value={title} onChange={(e) => this.handleInputChange(e)} name="title" placeholder="Nom du Service" required />
                                                         {isTyping && !titleValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                     </div>
                                                     <div className="form-group col-md-6 col-sm-12">
-                                                        <label for="category">Catégorie*</label>
+                                                        <label for="category">Catégorie *</label>
                                                         <select id="category" name="category" value={category} onChange={(e) => this.handleInputChange(e)} className={isTyping && !categoryValid ? "form-control is-invalid" : "form-control"} >
                                                             <option>Choisir...</option>
                                                             {
@@ -496,7 +496,7 @@ class ServiceModal extends Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <label for="name">Offre</label>
+                                                    <label for="name">Offre *</label>
                                                     <textarea type="text" value={offre} className={isTyping && !offreValid ? "form-control is-invalid" : "form-control"} onChange={(e) => this.handleInputChange(e)} name="offre" rows={2} placeholder="Offre"></textarea>
                                                     {isTyping && !offreValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                 </div>
@@ -518,7 +518,7 @@ class ServiceModal extends Component {
                                                 <div className="row">
                                                     <div className="col-md-6 col-sm-12">
                                                         <div className="form-group">
-                                                            <label for="place">Lieux & Adresse</label>
+                                                            <label for="place">Lieux & Adresse*</label>
                                                             <input type="text" value={tempPlace} onChange={(e) => this.handleInputChange2(e)} className={isTyping && !placeValid ? "form-control is-invalid" : "form-control"} name="place" placeholder="Lieu & Adresse" required />
                                                             {isTyping && !placeValid ? <div className="invalid-feedback">Invalide</div> : null}
                                                             {
