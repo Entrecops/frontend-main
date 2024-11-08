@@ -14,9 +14,9 @@ class Footer extends Component {
                         <div className="col-sm-12 col-md-3">
                             <h4 className="text-white">Liens Rapides</h4>
                             <ul>
-                                <li><a href="/auth/login">Mon Compte</a></li>
+                                <li><a href="/user/profile">Mon Compte</a></li>
                                 <li><a href="/services">Services</a></li>
-                                <li><a href="/events">Annonces</a></li>
+                                <li><a href="/events">Actualités</a></li>
                                 <li><a href="/gallery">Galerie</a></li>
                             </ul>
                         </div>
@@ -33,7 +33,7 @@ class Footer extends Component {
                             <h4 className="text-white">Contact</h4>
                             <ul>
                                 <li>Entre Cops, Yaoundé Cameroun</li>
-                                <li>Appelez-nous: 697395271</li>
+                                <li>Appelez-nous: +237 6 97 39 52 71</li>
                                 <li>Email: dtamamot@gmail.com</li>
                             </ul>
 
