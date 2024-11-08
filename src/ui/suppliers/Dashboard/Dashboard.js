@@ -181,7 +181,7 @@ class Dashboard extends Component {
                         <div className="row pt-3">
                             <div className="col-sm-12 d-flex mb-3 add-buttom-wrapper">
                                 <h2 className="py-3 mr-auto align-align-self-end">TOUTES LES RESERVATIONS</h2>
-                                <button className="button" onClick={() => this.setState({showNewEv: true})}>NOUVEL EVENEMNT</button>
+                                <button className="button" onClick={() => this.setState({showNewEv: true})}>NOUVELLE ACTUALITE</button>
                                 <button className="button" onClick={() => this.setState({showNewAn: true})}>NOUVEAU SERVICE</button>
                             </div>
                             {/* Reservations (Tout) */}
@@ -200,7 +200,7 @@ class Dashboard extends Component {
                                             <th>Client</th>
                                             <th>Téléphone</th>
                                             <th>Montant</th>
-                                            <th>Service/Evenement</th>
+                                            <th>Service/Actualité</th>
                                             <th>Date</th>
                                             <th>Paiement</th>
                                             <th>Date Paiement</th>
@@ -235,10 +235,10 @@ class Dashboard extends Component {
                             </div>
                         </div>
                         {/* Events */}
-                        <div className="row mt-2"><div className="col-sm-12 mt-2"><h3>MES EVENEMENTS</h3></div></div>
+                        <div className="row mt-2"><div className="col-sm-12 mt-2"><h3>MES ACTUALITES</h3></div></div>
                         <div className='row pb-2'>
                             <div className="col-sm-12 text-center mb-2">
-                                <input type="text" placeholder="Rechercher un evenement" id="searchbar" onChange={this.searchEvent}/>
+                                <input type="text" placeholder="Rechercher une actualité" id="searchbar" onChange={this.searchEvent}/>
                             </div>
                         </div>
                         <div className="row mt-4 pb-5">

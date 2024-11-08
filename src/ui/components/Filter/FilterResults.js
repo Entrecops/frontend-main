@@ -59,7 +59,7 @@ class FilterResults extends Component {
                 <Categories />
                 {this.state.loading ?   <div className="d-flex justify-content-center py-5"><Loader/></div>:
                 <Hoc>
-                    <Events eventType="Evènements" events={this.state.events} isFilterPage={true} />
+                    <Events eventType="Actualités" events={this.state.events} isFilterPage={true} />
                     <Services eventType="Services" services={this.state.services} isFilterPage={true} />  
                 </Hoc>
                 }

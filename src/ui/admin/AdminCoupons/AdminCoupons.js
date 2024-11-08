@@ -246,10 +246,10 @@ class AdminCoupons extends Component {
                     </div>
                     {/* <div className="row">
                         <div className="col-sm-12 col-md-8 col-lg-8">
-                            <input type="text" placeholder="Rechercher un service / Evènement" id="searchbar" />
+                            <input type="text" placeholder="Rechercher un service / Actualité" id="searchbar" />
                         </div>
                     </div> */}
-                    {/* Evenement */}
+                    {/* Actualité */}
                     <div className="row mt-3">
                         <div className="col-sm-12">
                             {error.length ? <div className="alert alert-danger" style={{ fontSize: "1.3rem" }}>{error}</div> : null}
@@ -353,7 +353,7 @@ class AdminCoupons extends Component {
                                 {
                                     loading ? <div className="d-block mr-auto ml-auto text-center"><Loader /></div>:
                                     selectedAnnonce ?
-                                    <div className="col-sm-12 pl-4 pr-4 mt-4 mb-3">
+                                    <div className="col-sm-12 pr-10 mt-10 mb-8">
                                         {!this.state.couponValid ? <div className="alert alert-danger mb-4">Veuillez remplis tous les champs</div>:null}
                                         <div className="pb-3">
                                             <h4>Coupons pour: &nbsp;<b>{selectedAnnonce.title}</b></h4>

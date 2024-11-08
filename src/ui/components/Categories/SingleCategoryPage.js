@@ -82,7 +82,7 @@ class SingleCategoryPage extends Component {
                         {
                             this.props.match.params.AnounceType === "events" || isAllAnoucesPage ?
                                 loadingEvents ? <div className="d-flex justify-content-center py-5"><Loader /></div> :
-                                <Events showMore={isAllAnoucesPage} category={category}  events={events} isCategoryPage={true} displayFilter={true} eventType="Evènements" isHomePage={false} /> : null
+                                <Events showMore={isAllAnoucesPage} category={category}  events={events} isCategoryPage={true} displayFilter={true} eventType="Actualités" isHomePage={false} /> : null
                         }
                         {
                             this.props.match.params.AnounceType === "services" || isAllAnoucesPage ?

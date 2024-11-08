@@ -201,9 +201,9 @@ class AdminHome extends Component {
                         <div className="col-md-6 col-lg-3 col-sm-6 mb-2">
                             <div className="card text-center">
                                 <div className="card-body">
-                                    <h5 className="card-title">Evènement</h5>
-                                    <p className="card-text">Valider/Supprimer Evènement.</p>
-                                    <Link className="btn btn-dark btn-block" to="/admin/annonces">Gérer les Evènements</Link>
+                                    <h5 className="card-title">Actualité</h5>
+                                    <p className="card-text">Valider/Supprimer Actualité.</p>
+                                    <Link className="btn btn-dark btn-block" to="/admin/annonces">Gérer les Actualités</Link>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +231,7 @@ class AdminHome extends Component {
 
                     <div className="row mt-5">
                         <div className="col-sm-12">
-                            <h3 className="title">EVENEMENTS RECENTS</h3>
+                            <h3 className="title">ACTUALITES RECENTS</h3>
                         </div>
                         <div className="col-sm-12 text-center">
                             {error && error.length ? <div className="alert alert-danger" style={{ fontSize: "1.3rem" }}>{error}</div> : null}

@@ -98,7 +98,7 @@ class Admin extends Component {
                                     <h3 className="d-inline align-middle">ACCUEIL</h3>
                                 </NavLink>
                                 <NavLink className="navbar-brand" to="/admin/annonces">
-                                    <h3 className="d-inline align-middle">EVENEMENTS</h3>
+                                    <h3 className="d-inline align-middle">ACTUALITES</h3>
                                 </NavLink>
                                 <NavLink className="navbar-brand" to="/admin/services">
                                     <h3 className="d-inline align-middle">SERVICES</h3>

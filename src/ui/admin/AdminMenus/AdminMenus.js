@@ -101,7 +101,7 @@ class AdminMenu extends Component {
                                         <thead className="thead-inverse thead-dark">
                                             <tr>
                                                 <th>#</th>
-                                                <th>Service/Evenement</th>
+                                                <th>Service/Actualité</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>

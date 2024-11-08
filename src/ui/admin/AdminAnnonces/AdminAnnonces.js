@@ -159,7 +159,7 @@ class AdminAnnonce extends Component {
                 <div className="container">
                     <div className="row mt-5">
                         <div className="col-sm-12 d-flex justify-content-between align-items-center mb-2">
-                            <h3 className="title">TOUTES LES EVENEMENTS</h3>
+                            <h3 className="title">TOUTES LES ACTUALITES</h3>
                             <button onClick={() => this.setState({showCreationModal: true})} className="button">Ajouter un évènement</button>
                         </div>
                         <div className="col-sm-12 text-center mb-2">
