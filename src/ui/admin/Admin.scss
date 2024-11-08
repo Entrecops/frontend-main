@@ -163,6 +163,13 @@
             font-size: 1.3rem;
             text-align: center !important;
             margin-bottom: 0 !important;
+
+            a{
+                margin-inline-end: 10px !important;
+                :hover{
+                    color: $maincolor;
+                }
+            }
             @media only screen and (max-width: 900px) {
                 font-size: 1.25rem;
             }
@@ -180,8 +187,12 @@
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
-
+    .form-control {
+        border-radius: 10px;
+        height: 42px ;
+    }
     form {
+
         #category {
             height: 3rem;
             option {
@@ -269,6 +280,7 @@
     }
 
 }
+
 
 .reservations-list {
     td {

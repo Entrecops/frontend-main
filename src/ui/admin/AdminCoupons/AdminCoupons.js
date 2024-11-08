@@ -359,11 +359,11 @@ class AdminCoupons extends Component {
                                             <h4>Coupons pour: &nbsp;<b>{selectedAnnonce.title}</b></h4>
                                         </div>
                                         <div className="form-group">
-                                            <label for="name">Infos sur la réduction</label>
+                                            <label for="name">Infos sur la réduction</label><br/>
                                             <input type="text" onChange={(e) => this.handleInputChange(e)} value={this.state.infos} name="infos" className="form-control" placeholder="Informations"/>
                                         </div>
                                         <div className="form-group">
-                                            <label for="name">Montant / Poucentage de reduction</label>
+                                            <label for="name">Montant / Poucentage de reduction</label> <br/>
                                             <input type="text" onChange={(e) => this.handleInputChange(e)} value={this.state.montant} name="montant" className="form-control" placeholder="Montant / Pourcentage"/>
                                         </div>
                                         <div className="form-group">
@@ -371,7 +371,7 @@ class AdminCoupons extends Component {
                                             <DatePicker showTimeSelect placeholder="Date limite de validité" dateFormat="Pp" className="form-control" selected={this.state.datelimite} onChange={date => this.pickDate(date)} />
                                         </div>
                                         <div className="form-group">
-                                            <label for="ncoupons">Nombre de coupons</label>
+                                            <label for="ncoupons">Nombre de coupons</label> <br/>
                                             <input type="number" onChange={(e) => this.handleInputChange(e)} value={this.state.nCoupons} name="nCoupons" className="form-control" placeholder="Nombre de coupons"/>
                                         </div>
                                         <div className="couponwrap" id="couponwrap">
