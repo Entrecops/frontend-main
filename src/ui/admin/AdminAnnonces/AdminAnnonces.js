@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faEye, faPencilAlt} from '@fortawesome/free-solid-svg-icons';
 import EventModal from '../../suppliers/Dashboard/EventModal';
 import Hoc from '../../globalComponent/Hoc';
+import { SocialIcon } from 'react-social-icons';
 import { Notification, addNotification } from '../../globalComponent/Notifications'
 
 class AdminAnnonce extends Component {
@@ -25,7 +26,7 @@ class AdminAnnonce extends Component {
         deleting: false,
         eventsAll: [],
         currentPage: 1,
-        eventsPerPage: 15
+        eventsPerPage: 10
     }
 
     componentDidMount() {
@@ -177,6 +178,7 @@ class AdminAnnonce extends Component {
                                                 <th>Titre</th>
                                                 <th>Lieux</th>
                                                 <th>Date</th>
+                                                <th>Réseaux Sociaux</th>
                                                 <th>Categorie</th>
                                                 <th>Etat</th>
                                                 <th>Actions</th>
@@ -190,6 +192,25 @@ class AdminAnnonce extends Component {
                                                     <th>{event.title}</th>
                                                     <td>{event.place}</td>
                                                     <td><DateFormat date={event.date} /></td>
+                                                    <td>{event.facebookLink && event.facebookLink.length ||
+                                                        event.instagramLink && event.instagramLink.length ||
+                                                        event.twitterLink && event.twitterLink.length ||
+                                                        event.whatsappLink && event.whatsappLink.length ?
+                                                    <Hoc>
+                                                        <div className='align-items-center'>
+                                                            <div className='social-icons-container'>
+                                                                {event.facebookLink && event.facebookLink.length &&
+                                                                <SocialIcon url={event.facebookLink} size={"1x"}/>}
+                                                                {event.instagramLink && event.instagramLink.length &&
+                                                                <SocialIcon url={event.instagramLink} size={"1x"} />}
+                                                                {event.twitterLink && event.twitterLink.length &&
+                                                                <SocialIcon url={event.twitterLink} size={"1x"}/>}
+                                                                {event.whatsappLink && event.whatsappLink.length &&
+                                                                <SocialIcon url={`https://wa.me/${event.whatsappLink}`} size={"1x"}/>}
+                                                            </div>
+                                                        </div>
+                                                    </Hoc>:
+                                                    <p></p>}</td>
                                                     <td>{event.category}</td>
                                                     <td>{event.validated ? <span style={{ color: "green" }}>Validé</span> : <b style={{ color: "red" }}>En attente</b>}</td>
                                                     <td className="actions">

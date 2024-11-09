@@ -7,6 +7,7 @@ import { faDownload, faEye, faPencilAlt} from '@fortawesome/free-solid-svg-icons
 import ServiceModal from '../../suppliers/Dashboard/ServiceModal';
 import Loader from '../../globalComponent/Loader';
 import Hoc from '../../globalComponent/Hoc';
+import { SocialIcon } from 'react-social-icons';
 import { Notification, addNotification } from '../../globalComponent/Notifications'
 
 class AdminService extends Component {
@@ -18,7 +19,7 @@ class AdminService extends Component {
         services: [],
         servicesAll: [],
         currentPage: 1,
-        servicesPerPage: 15,
+        servicesPerPage: 10,
         error: '',
         service: null,
         loading: false,
@@ -191,7 +192,25 @@ class AdminService extends Component {
                                                         <th scope="row">{i + 1}</th>
                                                         <td>{service.title}</td>
                                                         <td>{service.place}</td>
-                                                        <td>{service.target}</td>
+                                                        <td className='align-items-center'>{service.facebookLink && service.facebookLink.length ||
+                                                        service.instagramLink && service.instagramLink.length ||
+                                                        service.twitterLink && service.twitterLink.length ||
+                                                        service.whatsappLink && service.whatsappLink.length ?
+                                                    <Hoc>
+                                                        <div className='align-items-center' >
+                                                            <div className='social-icons-container'>
+                                                                {service.facebookLink && service.facebookLink.length &&
+                                                                <SocialIcon url={service.facebookLink} size={"2x"}/>}
+                                                                {service.instagramLink && service.instagramLink.length &&
+                                                                <SocialIcon url={service.instagramLink} size={"2x"} />}
+                                                                {service.twitterLink && service.twitterLink.length &&
+                                                                <SocialIcon url={service.twitterLink} size={"2x"}/>}
+                                                                {service.whatsappLink && service.whatsappLink.length &&
+                                                                <SocialIcon url={`https://wa.me/${service.whatsappLink}`} size={"2x"}/>}
+                                                            </div>
+                                                        </div>
+                                                    </Hoc>:
+                                                    <p></p>}</td>
                                                         <td>{service.duration}</td>
                                                         <td>{service.validated ? <span style={{ color: "green" }}>Validé</span> : <b style={{ color: "red" }}>En attente</b>}</td>
                                                         <td className="actions">
