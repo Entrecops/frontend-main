@@ -200,13 +200,13 @@ class AdminService extends Component {
                                                         <div className='align-items-center' >
                                                             <div className='social-icons-container'>
                                                                 {service.facebookLink && service.facebookLink.length &&
-                                                                <SocialIcon url={service.facebookLink} size={"2x"}/>}
+                                                                <SocialIcon className='social-icons-con' url={service.facebookLink} network="facebook" style={{  width: 25, height: 25}}/>}
                                                                 {service.instagramLink && service.instagramLink.length &&
-                                                                <SocialIcon url={service.instagramLink} size={"2x"} />}
+                                                                <SocialIcon className='social-icons-con' url={service.instagramLink} network="instagram"style={{  width: 25, height: 25}}/>}
                                                                 {service.twitterLink && service.twitterLink.length &&
-                                                                <SocialIcon url={service.twitterLink} size={"2x"}/>}
+                                                                <SocialIcon className='social-icons-con' url={service.twitterLink} style={{  width: 25, height: 25}}/>}
                                                                 {service.whatsappLink && service.whatsappLink.length &&
-                                                                <SocialIcon url={`https://wa.me/${service.whatsappLink}`} size={"2x"}/>}
+                                                                <SocialIcon className='social-icons-con' url={`https://wa.me/${service.whatsappLink}`} network="whatsapp" style={{  width: 25, height: 25}}/>}
                                                             </div>
                                                         </div>
                                                     </Hoc>:

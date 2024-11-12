@@ -44,7 +44,7 @@ class AdminAnnonce extends Component {
                 this.setState({ error: "Une érreur s'est produite. Veuillez reéssayer.", eventsLoading: false })
             })
     }
-
+    
     searchEvent = ( e ) => {
         const filterParam = e.target.value;
         this.setState({ events: this.state.eventsAll.filter( ev => ev.title.toLowerCase().includes(filterParam.toLowerCase()))});
@@ -200,13 +200,13 @@ class AdminAnnonce extends Component {
                                                         <div className='align-items-center'>
                                                             <div className='social-icons-container'>
                                                                 {event.facebookLink && event.facebookLink.length &&
-                                                                <SocialIcon url={event.facebookLink} size={"1x"}/>}
+                                                                <SocialIcon className='social-icons-con' url={event.facebookLink} network ="facebook" style={{  width: 25, height: 25}}/>}
                                                                 {event.instagramLink && event.instagramLink.length &&
-                                                                <SocialIcon url={event.instagramLink} size={"1x"} />}
+                                                                <SocialIcon className='social-icons-con' url={event.instagramLink} network="instagram" style={{  width: 25, height: 25}}/>}
                                                                 {event.twitterLink && event.twitterLink.length &&
-                                                                <SocialIcon url={event.twitterLink} size={"1x"}/>}
+                                                                <SocialIcon className='social-icons-con' url={event.twitterLink} style={{  width: 25, height: 25}}/>}
                                                                 {event.whatsappLink && event.whatsappLink.length &&
-                                                                <SocialIcon url={`https://wa.me/${event.whatsappLink}`} size={"1x"}/>}
+                                                                <SocialIcon className='social-icons-con' url={`https://wa.me/${event.whatsappLink}`} network="whatsapp" style={{  width: 25, height: 25}}/>}
                                                             </div>
                                                         </div>
                                                     </Hoc>:
