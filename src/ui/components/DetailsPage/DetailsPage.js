@@ -523,6 +523,7 @@ class DetailsPage extends Component {
                                                             <FontAwesomeIcon icon={faMapMarked} size={"2x"} />
                                                             <h2>Lieu: {announce.place}</h2>
                                                         </div>
+                                                        <hr />
                                                         <div className="d-flex py-2">
                                                             <FontAwesomeIcon icon={faAnchor} size={"2x"} />
                                                             <h2>Contact: {announce.tel}</h2>
@@ -567,11 +568,7 @@ class DetailsPage extends Component {
                                                         </div>
                                                     }
                                                 </div>
-                                                <div className="moreinfos d-flex justify-content-center mb-3">
-                                                    <div className="headers d-flex align-items-center py-4">
-                                                        <FontAwesomeIcon icon={faComment} size={"2x"} />
-                                                        <h3 className="ml-3 mb-0">Reviews des clients</h3>
-                                                    </div>
+                                                <div className="moreinfos d-flex align-items-center justify-content-center mb-3"> {/* Reviews*/}
 
                                                     <Stars
                                                         rate={announce.rate ? announce.rate: null }
@@ -619,10 +616,11 @@ class DetailsPage extends Component {
                                                                         onClick={() => this.setState({ showVideo: true })}>
                                                                     </iframe>
                                                                 </Hoc> :
-                                                                <h3 className="mb-3 text-center"></h3>
+                                                                <h3 className="mb-3 text-center"><br/></h3>
+                                                                
                                                         }
                                                     </div>
-                                                    <div className="d-flex flex-column justify-content-center">
+                                                    <div className="d-flex flex-column align-items-center justify-content-between">
                                                         <br/>
                                                         {announce.mapLink && announce.mapLink.length ?
                                                             <Hoc>
@@ -639,13 +637,13 @@ class DetailsPage extends Component {
                                                 <Hoc>
                                                     <div className="otherinfos">
                                                         <div className="d-flex flex-column">
-                                                            <h3>Description</h3>
+                                                            <h3 className="mb-4">Description</h3>
                                                             <p>{announce.description}</p>
                                                         </div>
                                                     </div>
                                                     <div className="otherinfos">
                                                         <div className="d-flex flex-column">
-                                                            <h3>Autres Informations</h3>
+                                                            <h3 className="mb-4">Autres Informations</h3>
                                                             <p>{announce.otherInfos}</p>
                                                         </div>
                                                         <hr/>
@@ -680,7 +678,7 @@ class DetailsPage extends Component {
                                             <div className="moreinfos d-flex justify-content-between mb-3">
                                                 <div className="headers d-flex align-items-center py-4">
                                                     <FontAwesomeIcon icon={faComment} size={"2x"} />
-                                                    <h3 className="ml-3 mb-0">Reviews des clients</h3>
+                                                    <h3 className="mb-4">Reviews des clients</h3>
                                                 </div>
                                             </div>
                                             <div className="moreinfos">
