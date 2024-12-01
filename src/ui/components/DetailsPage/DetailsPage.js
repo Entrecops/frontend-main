@@ -639,6 +639,11 @@ class DetailsPage extends Component {
                                                         <div className="d-flex flex-column">
                                                             <h3 className="mb-4">Description</h3>
                                                             <p>{announce.description}</p>
+                                                            <div className="row">
+                                                                <div className="col text-center see-more">
+                                                                    <a href="/" className="btn btn-danger">Télécharger menu</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div className="otherinfos">
