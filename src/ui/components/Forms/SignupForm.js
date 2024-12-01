@@ -100,7 +100,7 @@ class SignUpForm extends Component {
                     <form>
                         {error&&error.length ? <div className="alert alert-danger">{error}</div>:null}
                         <input type="text" value={name} onChange={(e) => this.handleInputChange(e)} id="nom" className="fadeIn second" name="name" placeholder="Nom"/>
-                        {isTyping&&!nameValid ? <div style={{color: "red"}}>Invalide. Min 6 caratères</div>:null}
+                        {isTyping&&!nameValid ? <div style={{color: "red"}}>Invalide. Minimum 6 caratères du nom d'utilisateur</div>:null}
                         <input type="email" value={email} onChange={(e) => this.handleInputChange(e)} id="email" className="fadeIn second" name="email" placeholder="Adresse Email"/>
                         {isTyping&&!emailValid ? <div style={{color: "red"}}>Email non valide.</div>:null}
                         <input type="password" value={password} onChange={(e) => this.handleInputChange(e)} id="password" className="fadeIn third" name="password" placeholder="Mot de passe"/>
