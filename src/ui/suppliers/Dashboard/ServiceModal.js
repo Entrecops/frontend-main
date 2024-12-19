@@ -26,7 +26,7 @@ class ServiceModal extends Component {
         twitterLink: '',
         offre: '',
         duration: '',
-        tags: ['Fete', 'Concert', 'Shopping', 'Cinema', 'Brunch', 'Grillade', 'Restaurant', 'SnackBar'],
+        tags: ['Appartements', 'Bar-Lounge', 'Barbecue', 'Beauté', 'Boire', 'Cabaret', 'Coiffure', 'Concert', 'Danser', 'Grillade', 'Gym', 'Haman', 'Karaoké', 'Lodge', 'Manger', 'Manicure', 'Maquillage', 'Musique', 'Oldschool', 'Pédicure', 'Piscine', 'Randonnée', 'Sauna', 'Sport', 'Sushi', 'Tourisme']  ,
         place: '',
         mapLink: '',
         maxReservation: '',
@@ -498,7 +498,7 @@ class ServiceModal extends Component {
                                                     </div>
                                                 </div>
 
-                                                
+
                                                 <div className="form-group">
                                                     <label for="name">Offre*</label>
                                                     <textarea type="text" value={offre} className={isTyping && !offreValid ? "form-control is-invalid" : "form-control"} onChange={(e) => this.handleInputChange(e)} name="offre" rows={2} placeholder="Offre"></textarea>
